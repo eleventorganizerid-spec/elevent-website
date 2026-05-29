@@ -95,6 +95,11 @@
     grid-template-columns: 1fr;
   }
 
+  .headline {
+    font-size: clamp(2rem, 8vw, 4rem);
+    white-space: normal;
+  }
+
   .colHeadline {
     border-bottom: 1px solid var(--rule-dark);
   }

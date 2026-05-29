@@ -128,7 +128,7 @@
 
 @media (max-width: 767px) {
   .heroVideo {
-    display: none;
+    display: block;
   }
 
   .headline {
