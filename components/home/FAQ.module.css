@@ -1,3 +1,5 @@
+.mobileBreak { display: none; }
+
 .section {
   background: var(--chalk);
   padding-top: var(--section-pad-y);
@@ -124,8 +126,14 @@
 }
 
 @media (max-width: 767px) {
+  .mobileBreak { display: block; }
+
   .header {
     display: block;
+  }
+
+  .headline {
+    font-size: clamp(2rem, 9vw, 3rem);
   }
 
   .trigger {

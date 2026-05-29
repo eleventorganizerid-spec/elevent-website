@@ -98,6 +98,8 @@
   .headline {
     font-size: clamp(2.8rem, 11vw, 4.2rem);
     white-space: normal;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   .colHeadline {
