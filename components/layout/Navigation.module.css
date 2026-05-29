@@ -1,0 +1,231 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.header.scrolled {
+  background: var(--chalk);
+  border-bottom-color: var(--rule);
+}
+
+/* ── Hero / transparent mode (dark bg pages) ── */
+.header.heroMode .logo {
+  color: var(--chalk);
+}
+
+.header.heroMode .navLink {
+  color: rgba(247, 244, 239, 0.85);
+  opacity: 1;
+}
+
+.header.heroMode .navLink:hover {
+  color: var(--chalk);
+}
+
+/* scrolled always wins over heroMode */
+.header.scrolled .logo {
+  color: var(--ink);
+}
+
+.header.scrolled .navLink {
+  color: var(--stone);
+  opacity: 1;
+}
+
+.header.scrolled .navLink:hover {
+  color: var(--ink);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--page-pad);
+  height: 64px;
+}
+
+/* ── Logo ── */
+.logo {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.25s ease;
+}
+
+.logoV {
+  color: var(--sienna);
+}
+
+/* ── Nav links ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.5vw, 40px);
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+  opacity: 1;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--sienna);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.navLink:hover {
+  color: var(--ink);
+}
+
+/* ── Right side ── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+/* ── Language switcher ── */
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.langActive {
+  color: var(--sienna);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  /* Link element — ensure no browser default override */
+}
+
+.langSep {
+  color: var(--stone);
+}
+
+.langInactive {
+  color: var(--stone);
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.langInactive:hover {
+  opacity: 1;
+}
+
+.header.scrolled .langActive {
+  color: var(--sienna);
+}
+
+.header.scrolled .langInactive {
+  color: var(--stone);
+  opacity: 0.6;
+}
+
+.header.scrolled .langInactive:hover {
+  opacity: 1;
+}
+
+.header.heroMode .langInactive {
+  color: rgba(247, 244, 239, 0.6);
+  opacity: 1;
+}
+
+.header.heroMode .langInactive:hover {
+  color: rgba(247, 244, 239, 0.75);
+}
+
+/* heroMode + scrolled: chalk bg wins, revert to ink/stone palette */
+.header.heroMode.scrolled .langActive {
+  color: var(--sienna);
+}
+
+.header.heroMode.scrolled .langInactive {
+  color: var(--stone);
+  opacity: 0.6;
+}
+
+.header.heroMode.scrolled .langInactive:hover {
+  opacity: 1;
+  color: var(--ink);
+}
+
+/* ── CTA button ── */
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--chalk);
+  background: var(--sienna);
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 0;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.ctaBtn:hover {
+  opacity: 0.88;
+}
+
+/* ── Mobile ── */
+@media (max-width: 899px) {
+  .nav {
+    display: none;
+  }
+
+  .langSwitcher {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    height: 56px;
+    justify-content: space-between;
+  }
+}

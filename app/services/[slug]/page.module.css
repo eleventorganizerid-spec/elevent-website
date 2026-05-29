@@ -1,0 +1,412 @@
+.main {
+  background: var(--chalk);
+}
+
+/* ── Shared inner container ──────────────────────── */
+.inner {
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Shared section label ────────────────────────── */
+.sectionLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+
+.sectionLabelLight {
+  color: rgba(247, 244, 239, 0.4);
+}
+
+/* ── Thin rule ───────────────────────────────────── */
+.rule {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+/* ═══════════════════════════════════════════════════
+   1. HERO
+═══════════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(500px, 65vw, 760px);
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(28, 28, 30, 0.88) 0%,
+    rgba(28, 28, 30, 0.45) 55%,
+    rgba(28, 28, 30, 0.25) 100%
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(32px, 4vw, 56px) var(--page-pad);
+}
+
+.heroNumber {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.45);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroBack {
+  color: rgba(247, 244, 239, 0.45);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.heroBack:hover {
+  color: var(--chalk);
+}
+
+.heroSep {
+  color: rgba(247, 244, 239, 0.2);
+}
+
+.heroTitle {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(36px, 5.5vw, 80px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--chalk);
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.heroTagline {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(16px, 1.8vw, 22px);
+  color: rgba(247, 244, 239, 0.65);
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════════════
+   2. PROBLEM
+═══════════════════════════════════════════════════ */
+.problemSection {
+  background: var(--chalk);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(56px, 7vw, 100px);
+}
+
+/* ═══════════════════════════════════════════════════
+   3. APPROACH
+═══════════════════════════════════════════════════ */
+.approachSection {
+  background: var(--chalk);
+  padding-bottom: clamp(56px, 6vw, 88px);
+}
+
+.narrativeHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+.narrativeBody {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--stone);
+  max-width: 720px;
+}
+
+/* ═══════════════════════════════════════════════════
+   4. INCLUDED (dark)
+═══════════════════════════════════════════════════ */
+.includedSection {
+  background: var(--ink);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(56px, 7vw, 100px);
+}
+
+.includedHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--chalk);
+  line-height: 1.15;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.includedList {
+  display: flex;
+  flex-direction: column;
+  max-width: 760px;
+}
+
+.includedItem {
+  padding-bottom: clamp(20px, 2.5vw, 32px);
+}
+
+.includedRule {
+  height: 1px;
+  background: var(--rule-dark);
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+.includedText {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(247, 244, 239, 0.75);
+}
+
+/* ═══════════════════════════════════════════════════
+   5. IDEAL FOR
+═══════════════════════════════════════════════════ */
+.idealSection {
+  background: var(--chalk);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(56px, 6vw, 88px);
+  border-top: 1px solid var(--rule);
+}
+
+.idealText {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(18px, 2.2vw, 28px);
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 840px;
+}
+
+/* ═══════════════════════════════════════════════════
+   6. RELATED CASE STUDIES
+═══════════════════════════════════════════════════ */
+.relatedSection {
+  background: var(--chalk);
+  padding-top: clamp(48px, 6vw, 80px);
+  padding-bottom: clamp(56px, 7vw, 100px);
+  border-top: 1px solid var(--rule);
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+.relatedCard {
+  display: block;
+  text-decoration: none;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.relatedCardImage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.relatedCardImg {
+  transition: transform 0.5s ease !important;
+}
+
+.relatedCard:hover .relatedCardImg {
+  transform: scale(1.04) !important;
+}
+
+.relatedCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.35);
+  z-index: 1;
+}
+
+.relatedCardBody {
+  padding: 20px 24px 24px;
+  background: var(--chalk);
+  border: 1px solid var(--rule);
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.relatedCardMeta {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.relatedCardSep {
+  color: var(--rule);
+}
+
+.relatedCardTitle {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.relatedCardClient {
+  font-size: 13px;
+  color: var(--stone);
+}
+
+.allWorkLink {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.allWorkLink:hover {
+  color: var(--sienna);
+}
+
+/* ═══════════════════════════════════════════════════
+   7. FAQ
+═══════════════════════════════════════════════════ */
+.faqSection {
+  background: var(--chalk);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(56px, 7vw, 100px);
+  border-top: 1px solid var(--rule);
+}
+
+/* ═══════════════════════════════════════════════════
+   8. CTA
+═══════════════════════════════════════════════════ */
+.ctaSection {
+  position: relative;
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.ctaBg {
+  position: absolute;
+  inset: 0;
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.78);
+  z-index: 1;
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 2;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.ctaLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.35);
+}
+
+.ctaHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--chalk);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ctaHeadline em {
+  font-style: italic;
+}
+
+.ctaSubcopy {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.65;
+  color: rgba(247, 244, 239, 0.62);
+  max-width: 480px;
+}
+
+.ctaBtnPrimary {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--sienna);
+  color: var(--chalk);
+  padding: 16px 36px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.ctaBtnPrimary:hover {
+  background: #a84f24;
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE
+═══════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  .heroNumber {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .heroSep {
+    display: none;
+  }
+
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+}

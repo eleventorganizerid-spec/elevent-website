@@ -1,0 +1,483 @@
+SERVICE COPY AUDIT
+Generated: 2026-05-22T18:23:06.657Z
+Total services fetched: 16
+════════════════════════════════════════════════════════════════════════
+
+01/16  Corporate Event
+  slug:   corporate-event
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Ketika organisasi berkumpul — setiap momen harus bekerja.
+
+  DESCRIPTOR:
+    Format payung — annual leadership, kick-off, perayaan korporat berskala besar.
+
+  PROBLEM:
+    Event korporat gagal ketika diperlakukan sebagai kewajiban jadwal, bukan peluang strategis. Venue penuh, agenda padat — namun pesan utama tidak sampai dan peserta pulang tanpa perubahan nyata dalam cara mereka berpikir atau bekerja.
+
+  APPROACH:
+    Kami merancang corporate event sebagai lingkungan komunikasi strategis. Dari kick-off tahunan hingga town hall nasional, setiap elemen — urutan sesi, tata letak ruangan, momen transisi — dirancang untuk menggerakkan agenda bisnis tertentu ke depan.
+
+  INCLUDED:
+    01. Konsep penuh dan run-of-show acara
+    02. Pemilihan dan manajemen venue
+    03. Produksi panggung, AV, dan pencahayaan
+    04. Desain perjalanan peserta dari registrasi hingga penutupan
+    05. Manajemen pembicara dan narasumber
+    06. Katering dan hospitality
+    07. Dokumentasi foto dan video
+
+  IDEAL FOR:
+    Perusahaan yang menggelar gathering tahunan, kick-off strategi, town hall eksekutif, atau perayaan pencapaian korporat — dari 100 hingga 5.000+ peserta.
+
+════════════════════════════════════════════════════════════════════════
+
+02/16  Corporate Gathering
+  slug:   corporate-gathering
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Ruangan yang berbeda menghasilkan percakapan yang berbeda.
+
+  DESCRIPTOR:
+    Penyelarasan internal — townhall, family day, year-end engagement.
+
+  PROBLEM:
+    Gathering korporat sering berakhir sebagai pengulangan suasana kantor dengan meja makan yang lebih besar. Informasi disampaikan, tapi koneksi antar manusia yang semestinya diperkuat justru diabaikan.
+
+  APPROACH:
+    Kami merancang gathering sebagai momen penyelarasan manusia — bukan sekadar agenda yang dikemas dalam ruangan baru. Format, energi, dan ritme acara dirancang untuk mempertemukan orang pada level yang tidak bisa dicapai dalam rapat mingguan.
+
+  INCLUDED:
+    01. Konsep dan tema gathering
+    02. Manajemen venue dan logistik penuh
+    03. Program acara dan fasilitasi
+    04. Katering dan hospitality
+    05. Hiburan dan aktivitas interaktif
+    06. Dokumentasi foto dan video
+    07. Perlengkapan dan souvenir branded
+
+  IDEAL FOR:
+    Perusahaan yang menyelenggarakan family day, townhall nasional, year-end party, atau employee engagement gathering — untuk membangun koneksi yang tidak bisa dibangun melalui email.
+
+════════════════════════════════════════════════════════════════════════
+
+03/16  Product Launching
+  slug:   product-launching
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Kesan pertama yang menjadi momen pasar.
+
+  DESCRIPTOR:
+    Momen perkenalan produk — narasi, panggung, dan media dalam satu arsitektur.
+
+  PROBLEM:
+    Peluncuran produk adalah satu momen bertaruh tinggi yang entah meraih perhatian atau menghilang. Sebagian besar peluncuran mencampuradukkan pengumuman dengan dampak — mereka mengkomunikasikan fitur saat pasar mendengarkan makna.
+
+  APPROACH:
+    Kami membangun peluncuran produk sebagai narasi brand. Produk memasuki konteks yang telah kami ciptakan — suasana, ruangan, urutan reveal — dirancang agar jurnalis, mitra, dan pembeli merasakan signifikansinya sebelum memahami spesifikasinya.
+
+  INCLUDED:
+    01. Konsep dan kolateral teaser pra-peluncuran
+    02. Desain venue atau lingkungan pop-up
+    03. Desain pengalaman media dan tamu VIP
+    04. Urutan reveal produk dan penataan panggung
+    05. Setup pengambilan konten untuk pers dan media sosial
+    06. Coaching MC dan presenter
+    07. Koordinasi press kit pasca-acara
+
+  IDEAL FOR:
+    Brand yang memperkenalkan produk, platform, atau arah pasar baru kepada media, mitra, key account, atau konsumen — saat persepsi pertama adalah segalanya.
+
+════════════════════════════════════════════════════════════════════════
+
+04/16  Gala Dinner & Award Night
+  slug:   gala-dinner-award-night
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Malam di mana organisasi Anda mengingat dirinya sendiri.
+
+  DESCRIPTOR:
+    Malam selebrasi — koreografi penghargaan, hiburan, dan hospitality eksekutif.
+
+  PROBLEM:
+    Acara tahunan sering diperlakukan sebagai kewajiban — makan malam, beberapa pidato, sebuah piagam. Hasilnya adalah malam yang terlupakan yang hampir tidak berdampak pada retensi, kebanggaan, atau budaya.
+
+  APPROACH:
+    Kami memperlakukan gala sebagai jangkar budaya. Malam ini dirancang untuk memunculkan nilai-nilai organisasi, mengakui pencapaiannya, dan membuat setiap peserta pulang dengan perasaan bahwa mereka adalah bagian dari sesuatu yang bermakna.
+
+  INCLUDED:
+    01. Konsep penuh malam, tema, dan identitas visual
+    02. Transformasi venue dan desain atmosfer
+    03. Produksi urutan penghargaan dan upacara
+    04. Kurasi hiburan dan talent
+    05. Manajemen tamu dan strategi tempat duduk
+    06. Dokumentasi video dan foto
+    07. Pemberian hadiah meja dan touchpoint branded
+
+  IDEAL FOR:
+    Organisasi yang mengadakan upacara penghargaan tahunan, tonggak perusahaan, atau gala akhir tahun — di mana budaya, moral, dan identitas dipertaruhkan.
+
+════════════════════════════════════════════════════════════════════════
+
+05/16  Conference & Seminar
+  slug:   conference-seminar
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Di sinilah ide menjadi arah.
+
+  DESCRIPTOR:
+    Program multi-track — kurasi pembicara, alur sesi, dan ritme yang menjaga perhatian.
+
+  PROBLEM:
+    Sebagian besar konferensi dijadwalkan, bukan dirancang. Pembicara berbicara kepada deretan peserta yang pasif. Informasi disampaikan tetapi jarang diserap. Pada hari kedua, perhatian sudah meninggalkan ruangan.
+
+  APPROACH:
+    Kami merancang konferensi sebagai lingkungan pengambilan keputusan. Setiap sesi, transisi, dan tata letak ruangan dirancang untuk memajukan agenda — dari tempat duduk yang menciptakan dialog hingga urutan penutupan yang menghasilkan keselarasan, bukan sekadar tepuk tangan.
+
+  INCLUDED:
+    01. Konsep penuh dan run-of-show konferensi
+    02. Kurasi dan manajemen pembicara
+    03. Produksi panggung, AV, dan pencahayaan
+    04. Desain registrasi dan perjalanan peserta
+    05. Fasilitasi sesi dan panel
+    06. Manajemen breakout track paralel
+    07. Dokumentasi ringkasan dan materi peserta
+
+  IDEAL FOR:
+    Perusahaan dan asosiasi yang mengumpulkan 100–2.000+ profesional, eksekutif, atau pemangku kepentingan industri untuk berbagi pengetahuan, penyelarasan strategis, atau kepemimpinan pemikiran.
+
+════════════════════════════════════════════════════════════════════════
+
+06/16  Team Building
+  slug:   team-building
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Pengalaman bersama membangun apa yang rapat tidak bisa.
+
+  DESCRIPTOR:
+    Aktivitas dengan tujuan — bukan ice-breaker. Diukur dari hasil tim setelah event.
+
+  PROBLEM:
+    Acara team building sering terasa dipaksakan karena memang dipaksakan. Pemikiran yang mendahulukan aktivitas menghasilkan acara yang ditoleransi, bukan diingat — dan jarang meningkatkan kohesi atau kinerja tim yang sebenarnya.
+
+  APPROACH:
+    Kami merancang team building di sekitar tujuan organisasi yang spesifik — baik itu penyelarasan lintas fungsi, integrasi pasca-restrukturisasi, atau membangun kembali modal sosial setelah periode sulit. Aktivitas melayani hasil.
+
+  INCLUDED:
+    01. Workshop penetapan tujuan bersama kepemimpinan
+    02. Desain program dan aktivitas yang disesuaikan
+    03. Koordinasi venue dan logistik
+    04. Fasilitasi dan coaching tim
+    05. Manajemen katering dan hospitality
+    06. Dokumentasi foto dan video
+    07. Survei refleksi dan umpan balik pasca-acara
+
+  IDEAL FOR:
+    Tim 20–300 orang yang menavigasi perubahan, pertumbuhan, atau kebutuhan untuk bekerja lebih baik bersama — dari unit yang baru terbentuk hingga tim lama yang kehilangan kekuatannya.
+
+════════════════════════════════════════════════════════════════════════
+
+07/16  MICE & Hospitality
+  slug:   mice-hospitality
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    MICE bukan sekadar logistik — ini adalah kesan yang Anda tinggalkan.
+
+  DESCRIPTOR:
+    Meeting · incentive · convention · exhibition — operasi penuh untuk delegasi enterprise.
+
+  PROBLEM:
+    Program MICE enterprise sering gagal di celah koordinasi — antara meeting organizer, hotel, vendor, dan klien. Standar tidak konsisten, akuntabilitas tidak jelas, dan delegasi internasional merasakan perbedaannya.
+
+  APPROACH:
+    Kami mengelola program MICE sebagai satu operasi terpadu — satu titik kontak, satu standar, dari pre-event planning hingga post-event reporting. Setiap aspek dirancang untuk mencerminkan standar klien enterprise yang kami layani.
+
+  INCLUDED:
+    01. Manajemen program penuh (meeting, incentive, convention, exhibition)
+    02. Negosiasi dan manajemen venue serta hotel
+    03. Transportasi dan logistik delegasi
+    04. Katering dan hospitality eksekutif
+    05. Manajemen vendor dan koordinasi on-site
+    06. Dokumentasi dan pelaporan program
+    07. Manajemen peserta internasional
+
+  IDEAL FOR:
+    Perusahaan multinasional, asosiasi industri, dan organisasi yang menyelenggarakan program MICE dengan delegasi enterprise — di mana standar eksekusi dan reputasi perusahaan sedang dipertaruhkan.
+
+════════════════════════════════════════════════════════════════════════
+
+08/16  Hybrid & Virtual Event
+  slug:   hybrid-virtual-event
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Satu acara. Tidak ada audiens yang tertinggal.
+
+  DESCRIPTOR:
+    Kualitas broadcast — audiens jarak jauh diperlakukan sebagai audiens utama.
+
+  PROBLEM:
+    Acara hybrid biasanya tidak melayani audiens mana pun dengan baik. Ruangan fisik terganggu oleh logistik produksi; audiens jarak jauh adalah renungan belakangan. Hasilnya adalah kompromi yang buruk konversinya untuk kedua tujuan.
+
+  APPROACH:
+    Kami merancang acara hybrid sebagai dua pengalaman native yang berbagi momen, bukan satu acara dengan kamera di belakang. Audiens jarak jauh dan di dalam ruangan memiliki perjalanan berbeda yang bertemu di puncak yang dikoreografikan.
+
+  INCLUDED:
+    01. Desain pengalaman dual-audience
+    02. Produksi broadcast dan live streaming
+    03. Integrasi platform digital interaktif
+    04. Manajemen produksi dan AV dalam ruangan
+    05. Host dan moderasi jarak jauh
+    06. Rehearsal teknis dan perencanaan kontingensi
+    07. Perekaman on-demand dan distribusi
+
+  IDEAL FOR:
+    Organisasi dengan tim terdistribusi, audiens regional, atau pemangku kepentingan internasional — di mana kehadiran fisik terbatas tetapi keterlibatan tidak bisa.
+
+════════════════════════════════════════════════════════════════════════
+
+09/16  Incentive Trip
+  slug:   incentive-trip
+  tier:   tier1
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Hadiah terbaik adalah pengalaman yang tidak bisa dibeli sendiri.
+
+  DESCRIPTOR:
+    Program penghargaan multi-hari — destinasi, narasi, dan pengalaman yang diingat bertahun-tahun.
+
+  PROBLEM:
+    Perjalanan insentif yang gagal adalah yang terasa seperti paket wisata biasa dengan rompi berlogo perusahaan. Peserta menikmati liburannya — tapi kembali tanpa motivasi yang diperbarui atau loyalitas yang diperkuat.
+
+  APPROACH:
+    Kami merancang incentive trip sebagai narasi penghargaan yang imersif. Destinasi, aktivitas, dan momen-momen dalam perjalanan dirancang untuk menceritakan satu kisah: bahwa pencapaian mereka diakui, dihargai, dan diingat oleh organisasi.
+
+  INCLUDED:
+    01. Seleksi destinasi dan konsep perjalanan
+    02. Koordinasi akomodasi dan transportasi
+    03. Desain program aktivitas dan pengalaman
+    04. Manajemen peserta dan logistik grup
+    05. Private dining dan pengalaman kuliner
+    06. Dokumentasi foto dan video perjalanan
+    07. Koordinasi dengan vendor lokal dan otoritas setempat
+
+  IDEAL FOR:
+    Perusahaan yang memberikan penghargaan kepada top performer, high achiever, atau dealer terbaik melalui perjalanan — di mana pengalaman harus setara dengan pencapaian yang dihargai.
+
+════════════════════════════════════════════════════════════════════════
+
+10/16  Corporate Meeting
+  slug:   corporate-meeting
+  tier:   tier2
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Pertemuan yang produktif dimulai dari ruangan yang tepat.
+
+  DESCRIPTOR:
+    Ruang rapat yang dirancang untuk mendukung percakapan dan keputusan penting.
+
+  PROBLEM:
+    Rapat korporat penting sering diadakan di ruang yang tidak mendukung tujuannya. Kursi yang salah, suara yang bocor, teknologi yang tidak berfungsi — dan keputusan besar dicoba dibuat dalam kondisi yang salah.
+
+  APPROACH:
+    Kami mengelola corporate meeting sebagai layanan lingkungan dan pengalaman — dari seleksi ruang yang tepat, setup teknis yang mulus, hingga hospitality yang menjaga perhatian tetap tajam sepanjang sesi.
+
+  INCLUDED:
+    01. Seleksi dan manajemen venue rapat
+    02. Setup AV dan teknologi konferensi
+    03. Katering dan hospitality sesi
+    04. Koordinasi logistik peserta
+    05. Dokumentasi dan notulensi profesional
+    06. Manajemen on-site penuh
+
+  IDEAL FOR:
+    Tim eksekutif, board meeting, strategy session, atau pertemuan klien penting yang membutuhkan lingkungan yang mendukung kualitas percakapan dan pengambilan keputusan.
+
+════════════════════════════════════════════════════════════════════════
+
+11/16  Corporate Anniversary
+  slug:   corporate-anniversary
+  tier:   tier2
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Setiap tonggak layak diceritakan dengan cara yang tepat.
+
+  DESCRIPTOR:
+    Peringatan tonggak perusahaan — dari satu dekade hingga satu abad.
+
+  PROBLEM:
+    Peringatan perusahaan sering menjadi nostalgia tanpa arah. Foto lama, pidato panjang, kue berlapis — dan karyawan pulang tanpa mengerti mengapa tonggak ini penting bagi masa depan, bukan hanya masa lalu.
+
+  APPROACH:
+    Kami merancang peringatan korporat sebagai jembatan antara warisan dan visi. Malam ini dirancang untuk menghormati yang telah dicapai, menghidupkan kembali nilai-nilai yang masih relevan, dan meluncurkan babak berikutnya dengan momentum.
+
+  INCLUDED:
+    01. Konsep tema dan identitas visual peringatan
+    02. Program malam dan urutan upacara
+    03. Produksi konten sejarah (video, timeline, galeri)
+    04. Hiburan dan pertunjukan tematik
+    05. Manajemen tamu dan undangan
+    06. Dokumentasi foto dan video resmi
+    07. Cendera mata dan kolateral peringatan
+
+  IDEAL FOR:
+    Perusahaan yang merayakan 10, 25, 50 tahun atau lebih — di mana peringatan harus bermakna bagi karyawan, klien, dan pemangku kepentingan sekaligus.
+
+════════════════════════════════════════════════════════════════════════
+
+12/16  Corporate Outing
+  slug:   corporate-outing
+  tier:   tier2
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Keluar dari kantor. Masuk ke dalam tim.
+
+  DESCRIPTOR:
+    Satu hari di luar kantor yang dirancang untuk tim Anda secara spesifik.
+
+  PROBLEM:
+    Outing korporat yang gagal adalah yang terasa seperti obligasi HR — aktivitas generik yang sama yang dilakukan setiap departemen setiap tahun. Peserta hadir tapi tidak terlibat.
+
+  APPROACH:
+    Kami merancang outing sebagai pengalaman yang dipersonalisasi untuk tim Anda — dipilih berdasarkan dinamika tim, tujuan yang ingin dicapai, dan musim. Bukan paket jadi, tapi program yang dirancang untuk kelompok spesifik ini.
+
+  INCLUDED:
+    01. Seleksi aktivitas dan destinasi yang disesuaikan
+    02. Koordinasi transportasi dan logistik
+    03. Fasilitasi program dan aktivitas
+    04. Katering dan meal management
+    05. Perlengkapan dan safety briefing
+    06. Dokumentasi foto
+    07. Post-outing summary
+
+  IDEAL FOR:
+    Tim divisi, departemen, atau unit bisnis yang membutuhkan hari yang bermakna di luar rutinitas kantor — untuk kohesi, relaksasi yang bertujuan, atau sekadar ingatan bersama yang baik.
+
+════════════════════════════════════════════════════════════════════════
+
+13/16  Brand Activation
+  slug:   brand-activation
+  tier:   tier2
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Aktivasi yang mengkonversi kehadiran menjadi keterlibatan nyata.
+
+  DESCRIPTOR:
+    Aktivasi yang mengubah kehadiran menjadi keterlibatan nyata dan ingatan yang bertahan.
+
+  PROBLEM:
+    Aktivasi brand gagal ketika memprioritaskan spektakel atas keterlibatan. Keramaian bukan berarti koneksi. Sebagian besar aktivasi difoto dan dilupakan dalam hitungan jam.
+
+  APPROACH:
+    Kami merancang aktivasi sebagai pengalaman brand yang partisipatif. Pengunjung bukan penonton — mereka berperan. Setiap interaksi dirancang untuk menciptakan kenangan yang milik brand, bukan feed Instagram.
+
+  INCLUDED:
+    01. Desain konsep dan pengalaman
+    02. Desain ruang dan instalasi
+    03. Integrasi narasi dan pesan brand
+    04. Briefing kru dan talent
+    05. Manajemen perjalanan dan alur pengunjung
+    06. Setup pengambilan konten
+    07. Laporan pasca-aktivasi dan analisis jangkauan
+
+  IDEAL FOR:
+    Brand dengan kehadiran di acara publik, expo, mal, atau pengalaman yang dimiliki — di mana tujuannya adalah waktu tinggal, koneksi emosional, dan earned media.
+
+════════════════════════════════════════════════════════════════════════
+
+14/16  Exhibition & Pameran
+  slug:   exhibition-pameran
+  tier:   tier2
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Kehadiran pameran yang dirancang untuk menarik dan mengkonversi, bukan sekadar ditampilkan.
+
+  DESCRIPTOR:
+    Kehadiran pameran yang dirancang untuk menarik dan mengkonversi, bukan sekadar memajang.
+
+  PROBLEM:
+    Booth pameran yang gagal adalah yang dirancang seperti brosur tiga dimensi. Pengunjung melihat, membaca, dan berlalu. Tidak ada percakapan yang dimulai, tidak ada lead yang tertangkap, tidak ada kesan yang bertahan.
+
+  APPROACH:
+    Kami merancang kehadiran exhibition sebagai pengalaman — bukan display. Dari konsep booth, alur pengunjung, hingga aktivasi di dalam booth, setiap elemen dirancang untuk memulai percakapan yang tepat dengan orang yang tepat.
+
+  INCLUDED:
+    01. Desain konsep dan visual booth
+    02. Konstruksi dan instalasi booth
+    03. Desain alur dan pengalaman pengunjung
+    04. Materi dan kolateral promosi
+    05. Briefing dan manajemen tim booth
+    06. Sistem penangkapan lead
+    07. Dokumentasi dan laporan pasca-pameran
+
+  IDEAL FOR:
+    Perusahaan yang berpartisipasi dalam trade show, pameran industri, atau expo — di mana tujuannya adalah menghasilkan lead, membangun awareness, atau memperkuat posisi pasar.
+
+════════════════════════════════════════════════════════════════════════
+
+15/16  Roadshow
+  slug:   roadshow
+  tier:   tier2
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Program multi-kota dengan standar yang konsisten di setiap titik.
+
+  DESCRIPTOR:
+    Program multi-kota dengan standar yang konsisten di setiap titik.
+
+  PROBLEM:
+    Roadshow gagal ketika setiap kota terasa seperti acara yang berbeda — kualitas yang tidak konsisten, pesan yang terdilusi, dan audiens di kota ke-3 mendapat pengalaman yang lebih buruk dari kota ke-1.
+
+  APPROACH:
+    Kami mengelola roadshow sebagai satu program yang diekspresikan di banyak lokasi — dengan standar produksi, pesan, dan pengalaman yang identik dari kota pertama hingga kota terakhir. Adaptasi lokal dibuat tanpa mengorbankan konsistensi.
+
+  INCLUDED:
+    01. Perencanaan rute dan jadwal multi-kota
+    02. Manajemen venue di setiap kota
+    03. Logistik pergerakan tim dan peralatan
+    04. Produksi standar di setiap lokasi
+    05. Manajemen peserta lokal dan registrasi
+    06. Koordinasi media lokal
+    07. Pelaporan komprehensif per kota
+
+  IDEAL FOR:
+    Brand dan perusahaan yang ingin menjangkau audiens di beberapa kota dalam satu program terkoordinasi — untuk peluncuran produk, sosialisasi kebijakan, atau kampanye engagement regional.
+
+════════════════════════════════════════════════════════════════════════
+
+16/16  Corporate Event Organizer
+  slug:   corporate-event-organizer
+  tier:   tier2
+────────────────────────────────────────────────────────────────────────
+  TAGLINE:
+    Satu kontak. Satu standar. Untuk semua format event korporat Anda.
+
+  DESCRIPTOR:
+    Mitra EO strategis — satu titik akuntabilitas untuk seluruh kalender event Anda.
+
+  PROBLEM:
+    Banyak EO yang bisa mengeksekusi acara. Sedikit yang bisa memahami konteks bisnis di baliknya, memberikan perspektif yang menantang brief, dan bertanggung jawab penuh terhadap hasilnya — bukan hanya kehadiran dan dekorasi.
+
+  APPROACH:
+    ELEVENT beroperasi sebagai mitra event organizer strategis — bukan sekadar vendor. Kami membawa perspektif, pengalaman lintas industri, dan jaringan vendor terverifikasi ke setiap engagement, dengan satu titik akuntabilitas dari brief hingga evaluasi pasca-acara.
+
+  INCLUDED:
+    01. Konsultasi brief dan perencanaan strategis
+    02. Manajemen proyek penuh end-to-end
+    03. Koordinasi vendor dan subkontraktor
+    04. Manajemen anggaran dan pelaporan keuangan
+    05. Eksekusi on-site dan manajemen hari-H
+    06. Evaluasi dan pelaporan pasca-acara
+    07. Akses ke jaringan venue dan vendor terverifikasi ELEVENT
+
+  IDEAL FOR:
+    Perusahaan yang membutuhkan mitra EO jangka panjang yang memahami standar korporat, mampu mengelola kompleksitas enterprise, dan bisa dipercaya untuk merepresentasikan brand mereka di setiap acara.
+
+════════════════════════════════════════════════════════════════════════

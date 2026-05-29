@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Media */
+.media {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  /* next/image fill handles positioning */
+}
+
+.heroVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.62);
+  z-index: 2;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 3;
+  padding: 0 var(--page-pad);
+  padding-top: 120px;
+  padding-bottom: 120px;
+  max-width: 1400px;
+}
+
+.label {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 40px;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(42px, 6.5vw, 96px);
+  font-weight: 400;
+  line-height: 1.06;
+  color: var(--chalk);
+  margin-bottom: 36px;
+}
+
+.line1 {
+  display: block;
+}
+
+.line2 {
+  display: block;
+  margin-left: 6vw;
+}
+
+.line3 {
+  display: block;
+  margin-left: 2vw;
+  font-style: italic;
+}
+
+.subcopy {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.6;
+  color: rgba(247, 244, 239, 0.7);
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--sienna);
+  color: var(--chalk);
+  padding: 16px 32px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  display: inline-block;
+}
+
+.btnPrimary:hover {
+  background: #a84f24;
+}
+
+.btnText {
+  font-size: 15px;
+  color: rgba(247, 244, 239, 0.8);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.btnText:hover {
+  color: var(--chalk);
+}
+
+
+@media (max-width: 767px) {
+  .heroVideo {
+    display: none;
+  }
+
+  .headline {
+    font-size: clamp(36px, 9vw, 56px);
+  }
+
+  .line2 {
+    margin-left: 0;
+  }
+
+  .line3 {
+    margin-left: 0;
+  }
+
+}

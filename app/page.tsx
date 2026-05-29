@@ -1,66 +1,71 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Navigation from '@/components/layout/Navigation'
+import Footer from '@/components/layout/Footer'
+import Hero from '@/components/home/Hero'
+import TrustBar from '@/components/home/TrustBar'
+import WhatWeDo from '@/components/home/WhatWeDo'
+import Services from '@/components/home/Services'
+import CaseStudy from '@/components/home/CaseStudy'
+import WhyElevent from '@/components/home/WhyElevent'
+import Testimonial from '@/components/home/Testimonial'
+import FAQ from '@/components/home/FAQ'
+import LatestInsights from '@/components/home/LatestInsights'
+import CTASection from '@/components/home/CTASection'
+import { client } from '@/sanity/client'
+import { latestInsightsQuery } from '@/lib/queries'
+import type { Insight } from '@/lib/types'
+import { faqItems } from '@/lib/data'
 
-export default function Home() {
+interface HomeProps {
+  searchParams: Promise<{ lang?: string }>
+}
+
+export default async function Home({ searchParams }: HomeProps) {
+  const { lang } = await searchParams
+  const isEn = lang === 'en'
+
+  const [insights, services] = await Promise.all([
+    client.fetch<Insight[]>(latestInsightsQuery),
+    client.fetch<{ title: string; titleId?: string; slug: string; description?: string; descriptionEn?: string }[]>(
+      `*[_type == "service" && tier == "tier1"] | order(number asc) {
+        title,
+        titleId,
+        "slug": slug.current,
+        "description": descriptor,
+        "descriptionEn": descriptorEn
+      }`
+    ),
+  ])
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  }
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Navigation forceDark={true} />
+      <main style={{ background: 'var(--ink)' }}>
+        <Hero lang={lang} />
+        <TrustBar />
+        <WhatWeDo lang={lang} />
+        <Services services={services} lang={lang} />
+        <CaseStudy lang={lang} />
+        <WhyElevent lang={lang} />
+        <Testimonial />
+        <FAQ lang={lang} />
+        <LatestInsights insights={insights} lang={lang} />
+        <CTASection lang={lang} showLabel={true} />
       </main>
-    </div>
-  );
+      <Footer />
+    </>
+  )
 }

@@ -1,0 +1,140 @@
+.section {
+  background: var(--chalk);
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+}
+
+.inner {
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  align-items: baseline;
+  gap: 0;
+  margin-bottom: clamp(56px, 7vw, 100px);
+}
+
+.label {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  white-space: nowrap;
+}
+
+.headline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.headline em {
+  font-style: italic;
+}
+
+/* ── Card grid ── */
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: clamp(40px, 5vw, 64px) clamp(24px, 3vw, 48px);
+  border-right: 1px solid var(--rule);
+  position: relative;
+  overflow: hidden;
+}
+
+.block::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: var(--sienna);
+  transition: height 0.4s ease;
+}
+
+.block:hover::before {
+  height: 100%;
+}
+
+.block:last-child {
+  border-right: none;
+}
+
+/* ── Numeral ── */
+.numeral {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(72px, 11vw, 180px);
+  line-height: 0.85;
+  color: var(--sage);
+  letter-spacing: -0.02em;
+}
+
+/* ── Title ── */
+.colTitle {
+  /* wrapper for blockTitle */
+}
+
+.blockTitle {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.blockTitle em {
+  font-style: italic;
+}
+
+/* ── Body ── */
+.blockBody {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--stone);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .blocks {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .block {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .block:last-child {
+    border-bottom: none;
+  }
+
+  .numeral {
+    font-size: clamp(60px, 15vw, 100px);
+  }
+}

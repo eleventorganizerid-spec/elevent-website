@@ -1,0 +1,126 @@
+.section {
+  background: var(--ink);
+  padding: 60px 80px 80px;
+  box-sizing: border-box;
+}
+
+.inner {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.accentRule {
+  width: 120px;
+  height: 2px;
+  background: var(--sienna);
+  margin-bottom: 48px;
+}
+
+.sectionLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 56px;
+}
+
+/* ── Flex row ─────────────────────────────── */
+.grid {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.col {
+  flex: 1;
+  min-width: 0;
+  padding: 0 32px;
+}
+
+.col:first-child {
+  padding-left: 0;
+}
+
+.col:last-child {
+  padding-right: 0;
+}
+
+.colBorder {
+  border-right: 1px solid rgba(196, 98, 45, 0.25);
+}
+
+/* ── Stat ─────────────────────────────────── */
+.stat {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(32px, 3.5vw, 56px);
+  font-weight: 400;
+  color: var(--chalk);
+  line-height: 1.1;
+  white-space: normal;
+  word-break: break-word;
+  margin: 0;
+}
+
+.statAccent {
+  color: var(--sienna);
+}
+
+/* ── Description ──────────────────────────── */
+.desc {
+  font-family: var(--font-hanken-grotesk), sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(247, 244, 239, 0.65);
+  margin: 16px 0 0;
+}
+
+/* ── Mobile ─────────────────────────────────── */
+@media (max-width: 899px) {
+  .section {
+    padding: 60px var(--page-pad) 80px;
+  }
+
+  .grid {
+    flex-wrap: wrap;
+  }
+
+  .col {
+    flex: 0 0 50%;
+    padding: 0 24px 40px;
+  }
+
+  .col:first-child {
+    padding-left: 0;
+  }
+
+  .col:nth-child(2) {
+    padding-right: 0;
+  }
+
+  .col:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .colBorder {
+    border-right: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .col {
+    flex: none;
+    padding: 32px 0 0;
+    border-right: none;
+    border-top: 1px solid rgba(196, 98, 45, 0.25);
+  }
+
+  .col:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+}

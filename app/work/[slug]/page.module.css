@@ -1,0 +1,583 @@
+.main {
+  background: var(--chalk);
+}
+
+/* ── Shared inner container ──────────────────────── */
+.inner {
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Shared section label ────────────────────────── */
+.sectionLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+
+.sectionLabelLight {
+  color: rgba(247, 244, 239, 0.4);
+}
+
+/* ── Thin rule ───────────────────────────────────── */
+.rule {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+/* ═══════════════════════════════════════════════════
+   1. HERO
+═══════════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(480px, 60vw, 720px);
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.55);
+  z-index: 1;
+}
+
+/* ← ALL WORK — top-left of hero, below nav */
+.heroTop {
+  position: absolute;
+  top: 72px; /* nav height */
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: clamp(20px, 2.5vw, 32px) var(--page-pad);
+}
+
+.heroBack {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.heroBack:hover {
+  color: var(--chalk);
+}
+
+/* Client · Format · Year — bottom of hero */
+.heroBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: clamp(24px, 3vw, 40px) var(--page-pad);
+}
+
+.heroMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.65);
+}
+
+.heroMetaSep {
+  color: rgba(247, 244, 239, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════
+   2. HEADLINE + METADATA + BRIEF
+═══════════════════════════════════════════════════ */
+.introSection {
+  background: var(--chalk);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(56px, 7vw, 100px);
+}
+
+.caseTitle {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(32px, 4.5vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: clamp(40px, 5vw, 64px);
+  max-width: 900px;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+
+/* Data table */
+.dataTable {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule);
+}
+
+.dataRow {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+
+.dataKey {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  padding-top: 2px;
+  opacity: 0.65;
+}
+
+.dataVal {
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+/* Brief blockquote */
+.briefText {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.6;
+  color: var(--ink);
+  padding-top: 4px;
+}
+
+/* ═══════════════════════════════════════════════════
+   3 & 4. CHALLENGE + APPROACH (chalk, shared class)
+═══════════════════════════════════════════════════ */
+.narrativeSection {
+  background: var(--chalk);
+  padding-bottom: clamp(56px, 6vw, 88px);
+}
+
+.narrativeHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+.narrativeBody {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--stone);
+  max-width: 720px;
+}
+
+/* ═══════════════════════════════════════════════════
+   5. EXECUTION (dark ink bg)
+═══════════════════════════════════════════════════ */
+.executionSection {
+  background: var(--ink);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(56px, 7vw, 100px);
+}
+
+.narrativeHeadlineDark {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--chalk);
+  line-height: 1.15;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.executionList {
+  display: flex;
+  flex-direction: column;
+  max-width: 760px;
+}
+
+.executionItem {
+  padding-bottom: clamp(20px, 2.5vw, 32px);
+}
+
+.executionRule {
+  height: 1px;
+  background: var(--rule-dark);
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+.executionText {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(247, 244, 239, 0.75);
+}
+
+/* ═══════════════════════════════════════════════════
+   6. RESULT — 04 THE RESULT
+═══════════════════════════════════════════════════ */
+.resultSection {
+  background: var(--chalk);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(72px, 9vw, 130px);
+}
+
+/* outcomeNumber: very large, sienna, Instrument Serif italic */
+.resultNumber {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(64px, 8vw, 120px);
+  line-height: 0.9;
+  color: var(--sienna);
+  letter-spacing: -0.02em;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+/* ═══════════════════════════════════════════════════
+   7. CLIENT QUOTE
+═══════════════════════════════════════════════════ */
+.quoteSection {
+  background: var(--chalk);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(72px, 9vw, 130px);
+  border-top: 1px solid var(--rule);
+}
+
+.quoteInner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: start;
+  max-width: 900px;
+}
+
+/* Oversized sienna quote mark — same as homepage testimonial */
+.quoteMark {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(80px, 12vw, 160px);
+  line-height: 0.75;
+  color: var(--sienna);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.quoteContent {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 8px;
+}
+
+/* Quote text — Instrument Serif, large */
+.quoteText {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(20px, 2.4vw, 32px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* Attribution block */
+.quoteAttribution {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Thin rule between quote and attribution */
+.quoteRule {
+  width: 40px;
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: 4px;
+}
+
+/* Name — Instrument Serif upright */
+.quoteAttribName {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+/* Role — JetBrains Mono, stone, uppercase */
+.quoteAttribRole {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+  line-height: 1.5;
+}
+
+/* Company — Instrument Serif italic, stone */
+.quoteAttribCompany {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--stone);
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════════════════════════
+   8. MORE WORK
+═══════════════════════════════════════════════════ */
+.moreWorkSection {
+  background: var(--chalk);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(56px, 7vw, 100px);
+  border-top: 1px solid var(--rule);
+}
+
+.moreWorkGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.moreCard {
+  display: block;
+  text-decoration: none;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.moreCardImage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.moreCardImg {
+  transition: transform 0.5s ease !important;
+}
+
+.moreCard:hover .moreCardImg {
+  transform: scale(1.04) !important;
+}
+
+.moreCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.35);
+  z-index: 1;
+}
+
+.moreCardBody {
+  padding: 20px 24px 24px;
+  background: var(--chalk);
+  border: 1px solid var(--rule);
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.moreCardMeta {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.moreCardSep {
+  color: var(--rule);
+}
+
+.moreCardTitle {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.moreCardClient {
+  font-size: 13px;
+  color: var(--stone);
+}
+
+/* outcomeNumber — hidden at rest, reveals on card hover in sienna */
+.moreCardOutcome {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(18px, 1.8vw, 22px);
+  color: var(--sienna);
+  line-height: 1.1;
+  margin-top: 4px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.moreCard:hover .moreCardOutcome {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.moreWorkFooter {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.allWorkLink {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.allWorkLink:hover {
+  color: var(--sienna);
+}
+
+/* ═══════════════════════════════════════════════════
+   9. CTA — dark charcoal ink with photo overlay
+═══════════════════════════════════════════════════ */
+.ctaSection {
+  position: relative;
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.ctaBg {
+  position: absolute;
+  inset: 0;
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.78);
+  z-index: 1;
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 2;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.ctaLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.35);
+}
+
+.ctaHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--chalk);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ctaHeadline em {
+  font-style: italic;
+}
+
+.ctaSubcopy {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.65;
+  color: rgba(247, 244, 239, 0.62);
+  max-width: 480px;
+}
+
+/* GET A PROPOSAL — sienna */
+.ctaBtnPrimary {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--sienna);
+  color: var(--chalk);
+  padding: 16px 36px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  display: inline-block;
+}
+
+.ctaBtnPrimary:hover {
+  background: #a84f24;
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE
+═══════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+  .heroTop {
+    padding-top: 16px;
+  }
+
+  .introGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .quoteInner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .quoteMark {
+    font-size: clamp(60px, 18vw, 100px);
+  }
+
+  .moreWorkGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dataRow {
+    grid-template-columns: 80px 1fr;
+  }
+
+  /* Always show outcomeNumber on mobile (no hover) */
+  .moreCardOutcome {
+    opacity: 1;
+    transform: none;
+  }
+}

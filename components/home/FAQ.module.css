@@ -1,0 +1,135 @@
+.section {
+  background: var(--chalk);
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+}
+
+.inner {
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  align-items: baseline;
+  gap: 0;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.label {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  white-space: nowrap;
+}
+
+.headline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.headline em {
+  font-style: italic;
+}
+
+.accordion {
+  border-top: 1px solid var(--rule);
+}
+
+.item {
+  border-bottom: 1px solid var(--rule);
+}
+
+.trigger {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48px 1fr 32px;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 0 22px 24px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.trigger:hover {
+  background: var(--ink);
+}
+
+.trigger:hover .triggerNumber {
+  color: rgba(247, 244, 239, 0.45);
+}
+
+.trigger:hover .triggerQuestion {
+  color: var(--chalk);
+}
+
+.trigger:hover .triggerToggle {
+  color: var(--chalk);
+}
+
+.triggerNumber {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--stone);
+}
+
+.triggerQuestion {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(17px, 1.6vw, 22px);
+  color: var(--stone);
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.itemOpen .triggerQuestion {
+  color: var(--ink);
+}
+
+.triggerToggle {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 20px;
+  color: var(--stone);
+  transition: transform 0.3s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.triggerToggleOpen {
+  transform: rotate(45deg);
+  color: var(--sienna);
+}
+
+.answer {
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.answerInner {
+  padding: 0 0 24px 68px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--stone);
+  max-width: 680px;
+}
+
+@media (max-width: 767px) {
+  .trigger {
+    grid-template-columns: 40px 1fr 28px;
+    gap: 12px;
+  }
+
+  .answerInner {
+    padding-left: 52px;
+  }
+}

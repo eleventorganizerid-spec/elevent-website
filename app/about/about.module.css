@@ -1,0 +1,758 @@
+.main {
+  background: var(--chalk);
+}
+
+/* ── Shared inner container ──────────────────────── */
+.inner {
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Shared section label ────────────────────────── */
+.sectionLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+
+.sectionLabelLight {
+  color: rgba(247, 244, 239, 0.4);
+}
+
+/* ── Shared serif section headline ──────────────── */
+.sectionHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+}
+
+/* ── Narrative headline ──────────────────────────── */
+.narrativeHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+/* ── Thin rule ───────────────────────────────────── */
+.rule {
+  height: 1px;
+  background: var(--rule);
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+/* ═══════════════════════════════════════════════════
+   1. HERO — pure dark ink, no photo (unchanged)
+═══════════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: clamp(520px, 55vw, 640px);
+  background: var(--ink);
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: clamp(56px, 7vw, 96px);
+  padding-top: calc(72px + clamp(40px, 5vw, 72px));
+}
+
+.heroInner {
+  width: 100%;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2.5vw, 32px);
+}
+
+.heroLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.4);
+}
+
+.heroHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(36px, 5.5vw, 80px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--chalk);
+  display: flex;
+  flex-direction: column;
+}
+
+.heroHeadline span {
+  display: block;
+}
+
+.heroHeadline em {
+  display: block;
+  font-style: italic;
+}
+
+.heroSub {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(15px, 1.6vw, 19px);
+  line-height: 1.65;
+  color: rgba(247, 244, 239, 0.75);
+  max-width: 560px;
+}
+
+/* ═══════════════════════════════════════════════════
+   2. THE ORIGIN — pull quote layout
+   Left column: rotated "01 — THE ORIGIN" label
+   Right: large lead paragraph + narrower support
+═══════════════════════════════════════════════════ */
+.originSection {
+  background: var(--chalk);
+  padding-top: clamp(72px, 9vw, 130px);
+  padding-bottom: clamp(72px, 9vw, 130px);
+  border-top: 1px solid var(--rule);
+}
+
+/* Outer flex: side-label | content */
+.originLayout {
+  display: flex;
+  gap: clamp(32px, 4vw, 64px);
+  align-items: flex-start;
+}
+
+/* Narrow left column holding the rotated label */
+.originSideCol {
+  flex-shrink: 0;
+  width: 16px;
+  /* Enough height so the label doesn't get clipped */
+  min-height: 200px;
+  position: relative;
+}
+
+.originSideLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--stone);
+  opacity: 0.5;
+  white-space: nowrap;
+  /* Rotate CCW so text reads bottom-to-top */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Right side: all body content */
+.originContent {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 3.5vw, 48px);
+}
+
+/* First paragraph — large lead serif, full width */
+.originLead {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(24px, 2.8vw, 38px);
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 900px;
+  /* Separate visually from the support paragraphs */
+  padding-bottom: clamp(24px, 3vw, 40px);
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Second + third paragraphs — narrower column, right-offset */
+.originSupport {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 2vw, 28px);
+  max-width: 65ch;
+  /* Push toward the right of the content area */
+  margin-left: auto;
+}
+
+.originSupport p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--stone);
+}
+
+.originSupport em {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* ═══════════════════════════════════════════════════
+   3. WHAT WE BELIEVE — 3-col horizontal, dark ink
+   Each column: large sage numeral → title → body
+   Thin vertical rule between columns
+═══════════════════════════════════════════════════ */
+.beliefSection {
+  background: var(--ink);
+  padding-top: clamp(64px, 8vw, 112px);
+  padding-bottom: clamp(64px, 8vw, 112px);
+}
+
+/* Header: label + headline side by side */
+.beliefHeader {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(24px, 4vw, 64px);
+  flex-wrap: wrap;
+  margin-bottom: clamp(48px, 6vw, 88px);
+  padding-bottom: clamp(24px, 3vw, 40px);
+  border-bottom: 1px solid var(--rule-dark);
+}
+
+.beliefHeader .sectionLabel {
+  margin-bottom: 0;
+}
+
+/* Section headline on dark background */
+.beliefHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--chalk);
+  line-height: 1.15;
+}
+
+/* Three equal columns */
+.beliefCols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+
+.beliefCol {
+  padding: 0 clamp(28px, 4vw, 56px) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+/* Thin vertical rule between columns (on all but last) */
+.beliefColBorder {
+  border-right: 1px solid var(--rule-dark);
+  margin-right: clamp(28px, 4vw, 56px);
+}
+
+/* Large sage italic numeral */
+.beliefNumeral {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(80px, 10vw, 140px);
+  line-height: 0.8;
+  color: var(--sage);
+  letter-spacing: -0.02em;
+  /* Negative bottom margin so title sits close */
+  margin-bottom: clamp(-8px, -0.5vw, -4px);
+}
+
+/* English serif statement — chalk on dark */
+.beliefStatement {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--chalk);
+}
+
+/* Indonesian body — muted chalk */
+.beliefBody {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(247, 244, 239, 0.6);
+}
+
+/* ═══════════════════════════════════════════════════
+   4. HOW WE WORK — split layout, chalk
+   Left 55%: label + headline + body
+   Right 45%: stats stacked w/ thin rules
+═══════════════════════════════════════════════════ */
+.modelSection {
+  background: var(--chalk);
+  padding-top: clamp(64px, 8vw, 120px);
+  padding-bottom: clamp(72px, 9vw, 140px);
+  border-top: 1px solid var(--rule);
+}
+
+/* 55/45 split grid */
+.modelSplit {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: clamp(48px, 7vw, 100px);
+  align-items: start;
+}
+
+.modelLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label: override bottom margin for tight stacking with headline */
+.modelLeft .sectionLabel {
+  margin-bottom: 16px;
+}
+
+.modelHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+.modelBody {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.modelBody p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--stone);
+}
+
+.modelBody em {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* Right: stats stacked vertically with thin rules */
+.modelRight {
+  display: flex;
+  flex-direction: column;
+  /* Align top edge with the headline, below the label */
+  padding-top: clamp(36px, 4vw, 52px);
+}
+
+.modelStat {
+  padding: clamp(20px, 2.5vw, 36px) 0;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Large sienna serif italic number */
+.modelStatNum {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(64px, 9vw, 120px);
+  line-height: 0.85;
+  color: var(--sienna);
+  letter-spacing: -0.02em;
+}
+
+/* Mono city names */
+.modelStatCities {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: clamp(12px, 1.2vw, 15px);
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  line-height: 1.5;
+  padding: 6px 0 2px;
+}
+
+/* Stat descriptor label */
+.modelStatLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+  opacity: 0.6;
+}
+
+/* ═══════════════════════════════════════════════════
+   5. THE STANDARD — 2×2 bordered cell grid
+   gap-as-border trick: rule-colored grid bg + 1px gap
+   Cells stay chalk — just the border grid shows
+═══════════════════════════════════════════════════ */
+.standardSection {
+  background: var(--chalk);
+  padding-top: clamp(64px, 8vw, 120px);
+  padding-bottom: clamp(64px, 8vw, 120px);
+  border-top: 1px solid var(--rule);
+}
+
+/* Header: label + headline in-line */
+.standardHeader {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(24px, 4vw, 64px);
+  flex-wrap: wrap;
+  margin-bottom: clamp(40px, 5vw, 72px);
+}
+
+.standardHeader .sectionLabel {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+/* 2×2 grid — the grid's background colour + gap = borders */
+.standardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  /* Outer border */
+  border: 1px solid var(--rule);
+}
+
+/* Each cell sits on chalk so the 1px rule-colored gaps read as borders */
+.standardCell {
+  background: var(--chalk);
+  padding: clamp(32px, 4vw, 56px) clamp(28px, 3.5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Sage mono number — top-left anchor */
+.standardNum {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--sage);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+/* Serif statement */
+.standardStatement {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+/* Body explanation */
+.standardBody {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--stone);
+}
+
+/* ═══════════════════════════════════════════════════
+   6. WHERE WE WORK — full-bleed photo strip + large cities
+   Photo strip: full-width, no overlay, no padding
+   Content: standard inner padding below
+═══════════════════════════════════════════════════ */
+.geoSection {
+  background: var(--chalk);
+  /* No padding-top — photo strip fills the top edge */
+  padding-bottom: clamp(64px, 8vw, 120px);
+}
+
+/* Full-bleed panoramic image strip */
+.geoPhotoStrip {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 25vw, 320px);
+  overflow: hidden;
+}
+
+/* Content below the photo strip */
+.geoBody {
+  padding-top: clamp(48px, 6vw, 88px);
+}
+
+.geoSub {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: var(--stone);
+  line-height: 1.6;
+  margin-bottom: clamp(40px, 5vw, 72px);
+  max-width: 480px;
+}
+
+/* Three equal city blocks */
+.cityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule);
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.cityBlock {
+  padding: clamp(28px, 3.5vw, 48px) clamp(24px, 3vw, 40px) clamp(28px, 3.5vw, 48px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cityBlockBorder {
+  border-right: 1px solid var(--rule);
+  margin-right: clamp(24px, 3vw, 40px);
+}
+
+/* Mono label: role */
+.cityLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+  opacity: 0.65;
+}
+
+/* City name — much larger than before */
+.cityName {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+/* City description */
+.cityDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--stone);
+  max-width: 32ch;
+}
+
+/* Secondary cities — small dim mono */
+.secondaryCities {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--stone);
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════════════════
+   7. CTA — dark ink with photo overlay (unchanged)
+═══════════════════════════════════════════════════ */
+.ctaSection {
+  position: relative;
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.ctaBg {
+  position: absolute;
+  inset: 0;
+}
+
+.ctaOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.78);
+  z-index: 1;
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 2;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.ctaLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.35);
+}
+
+.ctaHeadline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--chalk);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ctaHeadline span {
+  display: block;
+}
+
+.ctaHeadline em {
+  display: block;
+  font-style: italic;
+  margin-left: 80px;
+}
+
+.ctaSubcopy {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.65;
+  color: rgba(247, 244, 239, 0.62);
+  max-width: 480px;
+}
+
+.ctaBtn {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--sienna);
+  color: var(--chalk);
+  padding: 16px 36px;
+  text-decoration: none;
+  transition: filter 0.2s ease;
+  display: inline-block;
+}
+
+.ctaBtn:hover {
+  filter: brightness(0.9);
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════ */
+
+/* ── Tablet: 768–1023px ──────────────────────────── */
+@media (max-width: 1023px) {
+  /* Belief: tighter column padding */
+  .beliefCol {
+    padding-right: clamp(20px, 3vw, 36px);
+  }
+
+  .beliefColBorder {
+    margin-right: clamp(20px, 3vw, 36px);
+  }
+
+  /* Model: tighten the split */
+  .modelSplit {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+  }
+}
+
+/* ── Tablet portrait / large mobile: ≤899px ─────── */
+@media (max-width: 899px) {
+  /* Belief: stack columns to 1-col */
+  .beliefCols {
+    grid-template-columns: 1fr;
+  }
+
+  .beliefCol {
+    padding: clamp(24px, 4vw, 40px) 0;
+    border-top: 1px solid var(--rule-dark);
+    border-right: none !important;
+  }
+
+  .beliefColBorder {
+    border-right: none;
+    margin-right: 0;
+  }
+
+  .beliefHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Standard: single column on tablets */
+  .standardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Mobile: ≤767px ──────────────────────────────── */
+@media (max-width: 767px) {
+  /* Hero */
+  .hero {
+    min-height: unset;
+    height: auto;
+    padding-top: calc(60px + clamp(32px, 8vw, 56px));
+    padding-bottom: clamp(40px, 8vw, 64px);
+    align-items: flex-start;
+  }
+
+  /* Origin: hide rotated side label, stack normally */
+  .originSideCol {
+    display: none;
+  }
+
+  .originSupport {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  /* Model: single column */
+  .modelSplit {
+    grid-template-columns: 1fr;
+    gap: clamp(40px, 6vw, 64px);
+  }
+
+  .modelRight {
+    padding-top: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: clamp(24px, 4vw, 40px);
+  }
+
+  .modelStatNum {
+    font-size: clamp(56px, 16vw, 96px);
+  }
+
+  /* Standard: already 1-col from 899px breakpoint */
+  .standardHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Geography: stack city blocks */
+  .cityGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cityBlock {
+    padding-right: 0;
+    padding-top: clamp(24px, 5vw, 36px);
+    padding-bottom: clamp(24px, 5vw, 36px);
+    border-top: 1px solid var(--rule);
+  }
+
+  .cityBlockBorder {
+    border-right: none;
+    margin-right: 0;
+  }
+
+  .cityName {
+    font-size: clamp(40px, 12vw, 64px);
+  }
+
+  .cityDesc {
+    max-width: 100%;
+  }
+}

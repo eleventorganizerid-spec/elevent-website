@@ -1,0 +1,81 @@
+.section {
+  background: var(--ink);
+  padding-top: clamp(40px, 4vw, 56px);
+  padding-bottom: 0;
+}
+
+.inner {
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+
+/* Marquee */
+.marqueeWrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: clamp(48px, 6vw, 80px);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.brandItem {
+  padding: 12px 36px;
+  border: none;
+  color: rgba(247, 244, 239, 0.85);
+  display: inline-flex;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.brandItem:hover {
+  color: var(--chalk);
+}
+
+/* Typographic variants */
+.serifItalic {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: 22px;
+}
+
+.sansUpper {
+  font-family: var(--font-hanken-grotesk), system-ui, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mono {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+.serif {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 22px;
+}
+
+
+@media (max-width: 767px) {
+  .brandItem {
+    padding: 8px 14px;
+  }
+}

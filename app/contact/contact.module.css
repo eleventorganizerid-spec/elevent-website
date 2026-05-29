@@ -1,0 +1,376 @@
+/* ─────────────────────────────────────────────
+   Contact Page — contact.module.css
+───────────────────────────────────────────── */
+
+.main {
+  min-height: 100vh;
+}
+
+/* ── 1. HEADER ──────────────────────────────── */
+.header {
+  background: var(--ink);
+  min-height: 520px;
+  padding: calc(72px + 80px) var(--page-pad) 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  margin-bottom: 32px;
+}
+
+.headline {
+  font-family: var(--font-instrument-serif);
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 400;
+  color: var(--chalk);
+  line-height: 1.05;
+  margin: 0 0 32px;
+}
+
+.subtext {
+  font-family: var(--font-hanken-grotesk);
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(247, 244, 239, 0.75);
+  max-width: 520px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── 2. CONTACT INFO ────────────────────────── */
+.infoSection {
+  background: var(--chalk);
+  border-top: 1px solid var(--rule);
+  padding: 80px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.infoCol {
+  padding-right: 48px;
+}
+
+.infoCol:last-child {
+  padding-right: 0;
+}
+
+.colLabel {
+  display: block;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 24px;
+}
+
+/* Address */
+.address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  margin-bottom: 24px;
+}
+
+.address span {
+  font-family: var(--font-hanken-grotesk);
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+.colRule {
+  width: 100%;
+  height: 1px;
+  background: var(--rule);
+  margin: 24px 0;
+}
+
+.mapsLink {
+  font-family: var(--font-jetbrains-mono);
+  font-size: 11px;
+  color: var(--sienna);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.mapsLink:hover {
+  opacity: 0.75;
+}
+
+/* Contact items */
+.contactItem {
+  margin-bottom: 32px;
+}
+
+.contactItem:last-child {
+  margin-bottom: 0;
+}
+
+.contactItemLabel {
+  display: block;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 6px;
+}
+
+.contactValue {
+  font-family: var(--font-instrument-serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactValue:hover {
+  color: var(--sienna);
+}
+
+/* Hours */
+.hoursBlock {
+  margin-bottom: 24px;
+}
+
+.hoursDay {
+  font-family: var(--font-hanken-grotesk);
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.hoursTime {
+  font-family: var(--font-hanken-grotesk);
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.hoursNote {
+  font-family: var(--font-hanken-grotesk);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--stone);
+  line-height: 1.6;
+  margin: 16px 0 0;
+}
+
+/* ── 3. MAP ─────────────────────────────────── */
+.mapSection {
+  background: var(--chalk);
+  border-top: 1px solid var(--rule);
+  line-height: 0;
+}
+
+.mapSection iframe {
+  width: 100%;
+  height: 480px;
+  border: 0;
+  display: block;
+  filter: grayscale(1) contrast(1.1);
+}
+
+/* ── 4. CITIES ──────────────────────────────── */
+.citiesSection {
+  background: var(--chalk);
+  border-top: 1px solid var(--rule);
+  padding: 80px;
+}
+
+.citiesLabel {
+  display: block;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 48px;
+}
+
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cityBlock {
+  padding: 40px;
+  border: 1px solid var(--rule);
+}
+
+.cityTag {
+  display: block;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.cityName {
+  font-family: var(--font-instrument-serif);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 400;
+  color: var(--ink);
+  margin: 12px 0;
+  line-height: 1.0;
+}
+
+.cityDesc {
+  font-family: var(--font-hanken-grotesk);
+  font-size: 13px;
+  color: var(--stone);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── 5. CTA ─────────────────────────────────── */
+.ctaSection {
+  background: var(--ink);
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ctaLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctaLabel {
+  display: block;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  margin-bottom: 12px;
+}
+
+.ctaHeadline {
+  font-family: var(--font-instrument-serif);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 400;
+  color: var(--chalk);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.ctaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaBtnPrimary {
+  display: block;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--sienna);
+  color: var(--chalk);
+  padding: 16px 40px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0;
+  transition: filter 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctaBtnPrimary:hover {
+  filter: brightness(0.9);
+}
+
+.ctaBtnSecondary {
+  display: block;
+  font-family: var(--font-jetbrains-mono);
+  font-size: 11px;
+  color: var(--sienna);
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.ctaBtnSecondary:hover {
+  opacity: 0.75;
+}
+
+/* ── MOBILE ─────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    padding: 80px 24px;
+  }
+
+  /* Info */
+  .infoSection {
+    padding: 48px 24px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .infoCol {
+    padding-right: 0;
+  }
+
+  /* Map */
+  .mapSection iframe {
+    height: 320px;
+  }
+
+  /* Cities */
+  .citiesSection {
+    padding: 48px 24px;
+  }
+
+  .citiesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cityBlock {
+    padding: 32px 24px;
+  }
+
+  /* CTA */
+  .ctaSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding: 48px 24px;
+  }
+
+  .ctaLeft {
+    align-items: center;
+  }
+
+  .ctaRight {
+    width: 100%;
+  }
+
+  .ctaBtnPrimary {
+    width: 100%;
+  }
+}

@@ -1,0 +1,70 @@
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  height: clamp(600px, 80vw, 1000px);
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+/* Each photo item — positioned for fill Image */
+.itemLarge,
+.itemSmall {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Row 1: 60% | 40% */
+.row:first-child .itemLarge {
+  flex: 3;
+}
+
+.row:first-child .itemSmall {
+  flex: 2;
+}
+
+/* Row 2: 40% | 60% */
+.row:last-child .itemSmall {
+  flex: 2;
+}
+
+.row:last-child .itemLarge {
+  flex: 3;
+}
+
+/* Image hover scale */
+.img {
+  transition: transform 0.4s ease !important;
+}
+
+.itemLarge:hover .img,
+.itemSmall:hover .img {
+  transform: scale(1.02);
+}
+
+/* Mobile: stack all 4 vertically */
+@media (max-width: 767px) {
+  .grid {
+    height: auto;
+  }
+
+  .row {
+    flex-direction: column;
+    flex: none;
+  }
+
+  .itemLarge,
+  .itemSmall {
+    flex: none !important;
+    width: 100%;
+    height: 280px;
+  }
+}

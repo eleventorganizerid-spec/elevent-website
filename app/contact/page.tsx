@@ -1,0 +1,174 @@
+import type { Metadata } from 'next'
+import Navigation from '@/components/layout/Navigation'
+import AnimateIn from '@/components/ui/AnimateIn'
+import Footer from '@/components/layout/Footer'
+import CTASection from '@/components/home/CTASection'
+import styles from './contact.module.css'
+
+export const metadata: Metadata = {
+  title: 'Contact — ELEVENT',
+  description:
+    'Hubungi ELEVENT untuk pertanyaan, kunjungi kantor kami di Jakarta, atau kirimkan brief Anda.',
+}
+
+export default async function ContactPage({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
+  const { lang } = await searchParams
+  const isEn = lang === 'en'
+
+  return (
+    <>
+      <Navigation forceDark />
+      <main className={styles.main}>
+
+        {/* ── 1. HEADER ─────────────────────────────────────────────── */}
+        <section className={styles.header}>
+          <AnimateIn delay={0} className={styles.label}>CONTACT</AnimateIn>
+          <AnimateIn delay={0.1}>
+            <h1 className={styles.headline}>Let&apos;s talk.</h1>
+          </AnimateIn>
+          <AnimateIn delay={0.2} className={styles.subtext}>
+            {isEn
+              ? 'Contact us directly or visit our office in Jakarta. For event proposals, use the Get a Proposal form so we can respond more quickly and accurately.'
+              : 'Hubungi kami langsung atau kunjungi kantor kami di Jakarta. Untuk proposal event, gunakan form Get a Proposal agar kami bisa merespons dengan lebih cepat dan tepat.'}
+          </AnimateIn>
+        </section>
+
+        {/* ── 2. CONTACT INFO ───────────────────────────────────────── */}
+        <section className={styles.infoSection}>
+          <div className={styles.infoGrid}>
+
+            {/* Column 1 — Office */}
+            <div className={styles.infoCol}>
+              <span className={styles.colLabel}>{isEn ? 'MAIN OFFICE' : 'KANTOR UTAMA'}</span>
+              <address className={styles.address}>
+                <span>AD Premier Office Park</span>
+                <span>17th Floor, Suite 04B</span>
+                <span>Jl. TB Simatupang No.5</span>
+                <span>Ragunan, Pasar Minggu</span>
+                <span>Jakarta Selatan 12550</span>
+                <span>Indonesia</span>
+              </address>
+              <div className={styles.colRule} />
+              <a
+                href="https://maps.google.com/?q=AD+Premier+Office+Park+Jl+TB+Simatupang+Jakarta+Selatan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mapsLink}
+              >
+                {isEn ? 'View on Google Maps →' : 'Lihat di Google Maps →'}
+              </a>
+            </div>
+
+            {/* Column 2 — Direct contact */}
+            <div className={styles.infoCol}>
+              <span className={styles.colLabel}>{isEn ? 'CONTACT US' : 'HUBUNGI KAMI'}</span>
+
+              <div className={styles.contactItem}>
+                <span className={styles.contactItemLabel}>WHATSAPP</span>
+                <a
+                  href="https://wa.me/6281210704448"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contactValue}
+                >
+                  +62 812 1070 4448
+                </a>
+              </div>
+
+              <div className={styles.contactItem}>
+                <span className={styles.contactItemLabel}>EMAIL</span>
+                <a
+                  href="mailto:halo@elevent.id"
+                  className={styles.contactValue}
+                >
+                  halo@elevent.id
+                </a>
+              </div>
+            </div>
+
+            {/* Column 3 — Hours */}
+            <div className={styles.infoCol}>
+              <span className={styles.colLabel}>{isEn ? 'OFFICE HOURS' : 'JAM OPERASIONAL'}</span>
+
+              <div className={styles.hoursBlock}>
+                <p className={styles.hoursDay}>{isEn ? 'Monday — Friday' : 'Senin — Jumat'}</p>
+                <p className={styles.hoursTime}>09.00 — 18.00 WIB</p>
+              </div>
+
+              <div className={styles.hoursBlock}>
+                <p className={styles.hoursDay}>{isEn ? 'Saturday' : 'Sabtu'}</p>
+                <p className={styles.hoursTime}>09.00 — 14.00 WIB</p>
+              </div>
+
+              <div className={styles.colRule} />
+
+              <p className={styles.hoursNote}>
+                {isEn
+                  ? 'For urgent matters, WhatsApp is the fastest way to reach us.'
+                  : 'Untuk urusan mendesak, WhatsApp adalah cara tercepat menghubungi kami.'}
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ── 3. MAP ────────────────────────────────────────────────── */}
+        <div className={styles.mapSection}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990!2d106.81265!3d-6.29497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1b0ef16f27f%3A0x88bec3cf47b0cee6!2sAD%20Premier%20Office%20Park!5e0!3m2!1sen!2sid!4v1700000000000"
+            width="100%"
+            height="480"
+            style={{ border: 0, display: 'block', filter: 'contrast(1.1) saturate(0.6)' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="AD Premier Office Park, Jakarta Selatan"
+          />
+        </div>
+
+        {/* ── 4. CITIES ─────────────────────────────────────────────── */}
+        <section className={styles.citiesSection}>
+          <span className={styles.citiesLabel}>{isEn ? 'SERVICE AREAS' : 'AREA OPERASIONAL'}</span>
+          <div className={styles.citiesGrid}>
+
+            <div className={styles.cityBlock}>
+              <span className={styles.cityTag}>PRIMARY MARKET · HQ OPERATIONS</span>
+              <p className={styles.cityName}>Jakarta</p>
+              <p className={styles.cityDesc}>
+                {isEn
+                  ? 'Our primary market — we know every enterprise venue and vendor in this city.'
+                  : 'Pasar utama kami — kami mengenal setiap venue dan vendor enterprise di kota ini.'}
+              </p>
+            </div>
+
+            <div className={styles.cityBlock}>
+              <span className={styles.cityTag}>INTERNATIONAL MICE &amp; INCENTIVE HUB</span>
+              <p className={styles.cityName}>Bali</p>
+              <p className={styles.cityDesc}>
+                {isEn
+                  ? 'The preferred destination for incentive trips, international conferences, and MICE programs.'
+                  : 'Destinasi pilihan untuk incentive trip, konferensi internasional, dan program MICE.'}
+              </p>
+            </div>
+
+            <div className={styles.cityBlock}>
+              <span className={styles.cityTag}>EAST JAVA ENTERPRISE MARKET</span>
+              <p className={styles.cityName}>Surabaya</p>
+              <p className={styles.cityDesc}>
+                {isEn
+                  ? "East Java's economic hub with a strong enterprise business community."
+                  : 'Pusat ekonomi Jawa Timur dengan komunitas bisnis enterprise yang kuat.'}
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ── 5. CTA ────────────────────────────────────────────────── */}
+        <CTASection lang={lang} />
+
+      </main>
+      <Footer />
+    </>
+  )
+}

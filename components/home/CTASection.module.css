@@ -1,0 +1,136 @@
+.section {
+  position: relative;
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.photoBg {
+  position: absolute;
+  inset: 0;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 30, 0.78);
+  z-index: 1;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: clamp(20px, 3vw, 48px);
+}
+
+.spacer {
+  /* intentional breathing room */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.label {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.35);
+}
+
+.headline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(40px, 5.5vw, 80px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--chalk);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.line1 {
+  display: block;
+}
+
+.line2 {
+  display: block;
+}
+
+.line2 em {
+  font-style: italic;
+}
+
+.subcopy {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.65;
+  color: rgba(247, 244, 239, 0.62);
+  max-width: 520px;
+}
+
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--sienna);
+  color: var(--chalk);
+  padding: 16px 32px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  display: inline-block;
+}
+
+.btnPrimary:hover {
+  background: #a84f24;
+}
+
+.btnGhost {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--chalk);
+  border: 1.5px solid rgba(247, 244, 239, 0.45);
+  padding: 16px 32px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  display: inline-block;
+}
+
+.btnGhost:hover {
+  border-color: var(--chalk);
+  background: rgba(247, 244, 239, 0.06);
+}
+
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spacer {
+    display: none;
+  }
+}

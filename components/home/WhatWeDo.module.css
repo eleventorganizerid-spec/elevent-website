@@ -1,0 +1,112 @@
+.section {
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.colHeadline {
+  padding: var(--section-pad-y) var(--page-pad);
+  padding-top: clamp(32px, 3vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px;
+  overflow: visible;
+}
+
+.label {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.35);
+}
+
+.headline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(48px, 5.2vw, 76px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--chalk);
+  white-space: nowrap;
+}
+
+.headlineNormal {
+  display: block;
+}
+
+.headlineItalic {
+  display: block;
+  font-style: italic;
+  padding-left: 0.55em;
+}
+
+.headlineUnderline {
+  text-decoration: underline;
+  text-decoration-color: var(--sienna);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 4px;
+}
+
+.colBody {
+  padding: var(--section-pad-y) clamp(24px, 3vw, 56px);
+  padding-top: clamp(32px, 3vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+  border-left: 1px solid var(--rule-dark);
+}
+
+.bodyTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.cityLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 239, 0.35);
+  text-align: right;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cityLabel:hover {
+  color: var(--chalk);
+}
+
+.bodyText {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(247, 244, 239, 0.65);
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .colHeadline {
+    border-bottom: 1px solid var(--rule-dark);
+  }
+
+  .colBody {
+    border-left: none;
+    border-top: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

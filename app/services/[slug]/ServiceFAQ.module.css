@@ -1,0 +1,61 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  max-width: 760px;
+  border-top: 1px solid var(--rule);
+}
+
+.item {
+  border-bottom: 1px solid var(--rule);
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(18px, 2.5vw, 24px) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.trigger:hover .question {
+  color: var(--sienna);
+}
+
+.question {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: var(--ink);
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.icon {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 20px;
+  color: var(--stone);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.trigger[aria-expanded='true'] .icon {
+  color: var(--sienna);
+}
+
+.answer {
+  padding-bottom: clamp(18px, 2.5vw, 28px);
+}
+
+.answer p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--stone);
+  max-width: 660px;
+}

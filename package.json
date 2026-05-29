@@ -6,12 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "import-cases": "tsx --env-file=.env.local scripts/import-case-studies.ts",
+    "import-services": "tsx --env-file=.env.local scripts/import-services.ts"
   },
   "dependencies": {
+    "@sanity/client": "^7.22.0",
+    "@sanity/image-url": "^2.1.1",
     "next": "16.2.6",
+    "next-sanity": "^12.4.5",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "sanity": "^5.25.1",
+    "styled-components": "^6.4.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -19,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "tsx": "^4.22.3",
     "typescript": "^5"
   }
 }
