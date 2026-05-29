@@ -43,7 +43,7 @@ export default async function CaseStudy({ lang }: Props) {
         <p className={styles.label}>04 — FEATURED WORK</p>
 
         <h2 className={styles.headline}>
-          Fifty years. One night. <em>Five hundred witnesses.</em>
+          Fifty years. One night.<br className={styles.mobileBreak} /> <em>Five hundred witnesses.</em>
         </h2>
 
         {/* 2-col: photo left / details right */}

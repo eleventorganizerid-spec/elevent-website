@@ -142,7 +142,20 @@
   background: rgba(247, 244, 239, 0.06);
 }
 
+.mobileBreak {
+  display: none;
+}
+
 @media (max-width: 767px) {
+  .headline {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+    line-height: 1.2;
+  }
+
+  .mobileBreak {
+    display: block;
+  }
+
   .contentGrid {
     grid-template-columns: 1fr;
   }
@@ -155,10 +168,5 @@
   .photoCaption {
     flex-direction: column;
     gap: 4px;
-  }
-
-  .metaRow {
-    gap: 8px;
-    font-size: 10px;
   }
 }

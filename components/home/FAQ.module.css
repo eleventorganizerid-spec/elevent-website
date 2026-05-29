@@ -124,6 +124,10 @@
 }
 
 @media (max-width: 767px) {
+  .header {
+    display: block;
+  }
+
   .trigger {
     grid-template-columns: 40px 1fr 28px;
     gap: 12px;
