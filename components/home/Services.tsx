@@ -31,7 +31,7 @@ export default function Services({ services, lang }: Props) {
         <div className={styles.header}>
           <p className={styles.label}>03 — SERVICES</p>
           <h2 className={styles.headline}>
-            Nine formats.{' '}
+            Nine formats.<br className={styles.mobileBreak} />{' '}
             <em>One standard.</em>
           </h2>
         </div>

@@ -96,15 +96,18 @@
   }
 
   .headline {
-    font-size: clamp(2.4rem, 9vw, 3.5rem);
+    font-size: clamp(2.8rem, 11vw, 4.2rem);
     white-space: normal;
   }
 
   .colHeadline {
+    padding-bottom: 32px;
+    gap: 20px;
     border-bottom: 1px solid var(--rule-dark);
   }
 
   .colBody {
+    padding-top: 0;
     border-left: none;
     border-top: none;
   }

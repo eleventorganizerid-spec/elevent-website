@@ -131,6 +131,11 @@
     display: block;
   }
 
+  .label {
+    color: var(--chalk);
+    opacity: 0.55;
+  }
+
   .headline {
     font-size: clamp(36px, 9vw, 56px);
   }

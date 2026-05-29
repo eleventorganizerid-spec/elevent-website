@@ -20,9 +20,7 @@ export default function FAQ({ lang }: Props) {
         <div className={styles.header}>
           <p className={styles.label}>07 — QUESTIONS</p>
           <h2 className={styles.headline}>
-            {isEn
-              ? <>What enterprise buyers <em>ask first.</em></>
-              : <>Pertanyaan yang selalu <em>ditanyakan.</em></>}
+            What enterprise buyers <em>ask first.</em>
           </h2>
         </div>
 

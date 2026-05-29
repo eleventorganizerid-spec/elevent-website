@@ -148,8 +148,8 @@
 
 @media (max-width: 767px) {
   .headline {
-    font-size: clamp(1.6rem, 7vw, 2.4rem);
-    line-height: 1.2;
+    font-size: clamp(2rem, 8.5vw, 3rem);
+    line-height: 1.15;
   }
 
   .mobileBreak {

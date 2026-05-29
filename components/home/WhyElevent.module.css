@@ -1,3 +1,5 @@
+.mobileBreak { display: none; }
+
 .section {
   background: var(--chalk);
   padding-top: var(--section-pad-y);
@@ -116,9 +118,15 @@
 }
 
 @media (max-width: 767px) {
+  .mobileBreak { display: block; }
+
   .header {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .headline {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
   }
 
   .blocks {
