@@ -1,5 +1,3 @@
-.mobileBreak { display: none; }
-
 .section {
   background: var(--chalk);
   padding-top: var(--section-pad-y);
@@ -118,8 +116,6 @@
 }
 
 @media (max-width: 767px) {
-  .mobileBreak { display: block; }
-
   .header {
     grid-template-columns: 1fr;
     gap: 12px;

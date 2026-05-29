@@ -17,7 +17,7 @@ export default function WhatWeDo({ lang }: Props) {
           <p className={styles.label}>02 — WHAT WE DO</p>
           <h2 className={styles.headline}>
             <span className={styles.headlineNormal}>We don&apos;t execute briefs.</span>
-            <em className={styles.headlineItalic}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.headlineUnderline}>We direct outcomes.</span></em>
+            <em className={styles.headlineItalic}><span className={styles.headlineUnderline}>We direct outcomes.</span></em>
           </h2>
         </div>
 

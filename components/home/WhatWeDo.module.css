@@ -102,6 +102,10 @@
     letter-spacing: -0.02em;
   }
 
+  .headlineItalic {
+    padding-left: 1.2em;
+  }
+
   .colHeadline {
     padding-bottom: 32px;
     gap: 20px;

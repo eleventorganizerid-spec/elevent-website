@@ -14,8 +14,7 @@ export default function WhyElevent({ lang }: Props) {
         <div className={styles.header}>
           <p className={styles.label}>05 — WHY ELEVENT</p>
           <h2 className={styles.headline}>
-            The difference.<br className={styles.mobileBreak} />{' '}
-            <em>Is in the standard.</em>
+            The standard <em>is the difference.</em>
           </h2>
         </div>
 
