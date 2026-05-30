@@ -127,9 +127,6 @@ export default function Footer() {
             <Link href="/terms" className={styles.bottomLink}>
               Terms
             </Link>
-            <Link href="/imprint" className={styles.bottomLink}>
-              Imprint
-            </Link>
           </div>
         </div>
       </div>

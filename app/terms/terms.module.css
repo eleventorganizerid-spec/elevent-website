@@ -1,0 +1,58 @@
+.main {
+  background: var(--chalk);
+  padding-top: 120px;
+  padding-bottom: clamp(60px, 6vw, 100px);
+  min-height: 70vh;
+}
+
+.inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+}
+
+.label {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--stone);
+  margin-bottom: 24px;
+}
+
+.headline {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.meta {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 11px;
+  color: var(--stone);
+  margin-bottom: 56px;
+}
+
+.body h2 {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.body p {
+  font-family: var(--font-hanken-grotesk), sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--stone);
+  margin-bottom: 16px;
+}
+
+.body a {
+  color: var(--sienna);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
