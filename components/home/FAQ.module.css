@@ -47,6 +47,10 @@
   transition: border-color 0.25s ease;
 }
 
+.item:last-child {
+  border-bottom: none;
+}
+
 .item:hover {
   border-left: 2px solid var(--sienna);
 }
