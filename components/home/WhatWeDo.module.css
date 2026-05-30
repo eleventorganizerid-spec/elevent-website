@@ -119,8 +119,8 @@
   }
 
   .colHeadline {
-    padding-bottom: 32px;
-    gap: 20px;
+    padding-bottom: 16px;
+    gap: 12px;
     border-bottom: 1px solid var(--rule-dark);
   }
 
