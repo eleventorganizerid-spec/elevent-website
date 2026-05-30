@@ -99,13 +99,13 @@ export default async function CaseStudy({ lang }: Props) {
 
             <blockquote className={styles.quote}>
               {isEn
-                ? 'Brief that arrived: mark fifty years of Shimizu in Indonesia with a night that senior leadership would speak about for the next fifty.'
-                : 'Brief yang datang: tandai lima puluh tahun Shimizu di Indonesia dengan satu malam yang akan dibicarakan pimpinan senior selama lima puluh tahun ke depan.'}
+                ? 'One milestone. Three audiences with different expectations. One night that could not feel like any other event.'
+                : 'Satu milestone. Tiga audiens dengan ekspektasi berbeda. Satu malam yang tidak boleh terasa seperti acara biasa.'}
             </blockquote>
 
             <div className={styles.ctaWrap}>
               <Link href={`/work/shimizu-corporation-50th-anniversary${langParam}`} className={styles.cta}>
-                {isEn ? 'READ THE CASE STUDY →' : 'BACA CASE STUDY →'}
+                READ THE CASE STUDY →
               </Link>
             </div>
           </div>
