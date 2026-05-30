@@ -43,6 +43,20 @@
 
 .item {
   border-bottom: 1px solid var(--rule);
+  border-left: 2px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.item:hover {
+  border-left: 2px solid var(--sienna);
+}
+
+.item:hover .triggerQuestion {
+  color: var(--ink);
+}
+
+.item:hover .triggerToggle {
+  color: var(--sienna);
 }
 
 .trigger {
@@ -55,22 +69,8 @@
   text-align: left;
   background: none;
   border: none;
-  border-left: 2px solid transparent;
   cursor: pointer;
-  transition: border-color 0.25s ease;
-}
-
-.trigger:hover {
-  background: none;
-  border-left: 2px solid var(--sienna);
-}
-
-.trigger:hover .triggerQuestion {
-  color: var(--ink);
-}
-
-.trigger:hover .triggerToggle {
-  color: var(--sienna);
+  transition: none;
 }
 
 .triggerNumber {
