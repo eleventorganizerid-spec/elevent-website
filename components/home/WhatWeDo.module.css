@@ -125,7 +125,7 @@
   }
 
   .colBody {
-    padding-top: 0;
+    padding: 0 var(--page-pad);
     border-left: none;
     border-top: none;
   }
