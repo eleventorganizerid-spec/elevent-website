@@ -152,6 +152,10 @@
     flex-direction: row;
     align-items: center;
     gap: 24px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+
+  .btnPrimary {
+    white-space: nowrap;
   }
 }
