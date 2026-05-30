@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/home/Hero'
@@ -14,6 +15,24 @@ import { client } from '@/sanity/client'
 import { latestInsightsQuery } from '@/lib/queries'
 import type { Insight } from '@/lib/types'
 import { faqItems } from '@/lib/data'
+
+export const metadata: Metadata = {
+  title: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
+  description: 'Platform event organizer enterprise Indonesia. Gala dinner, conference, team building, roadshow, incentive trip. Jakarta, Bali, Surabaya. 100–5.000 peserta.',
+  alternates: {
+    canonical: 'https://elevent.id',
+    languages: {
+      id: 'https://elevent.id',
+      en: 'https://elevent.id/?lang=en',
+    },
+  },
+  openGraph: {
+    title: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
+    description: 'Platform event organizer enterprise Indonesia. Gala dinner, conference, team building, roadshow, incentive trip. Jakarta, Bali, Surabaya.',
+    url: 'https://elevent.id',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Elevent — Corporate Event Organizer Jakarta' }],
+  },
+}
 
 interface HomeProps {
   searchParams: Promise<{ lang?: string }>
