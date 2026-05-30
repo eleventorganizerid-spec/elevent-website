@@ -93,7 +93,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/get-a-proposal" className={`${styles.colLink} ${styles.colLinkAccent}`}>
-                  Get a Proposal →
+                  Bring Your Brief →
                 </Link>
               </li>
             </ul>

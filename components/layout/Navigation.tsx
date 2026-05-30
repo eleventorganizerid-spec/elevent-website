@@ -71,7 +71,7 @@ export default function Navigation({ forceDark = false }: NavigationProps) {
               <Link href={idUrl} className={currentLang === 'id' ? styles.langActive : styles.langInactive}>ID</Link>
             </span>
             <Link href={`/get-a-proposal${langParam}`} className={styles.ctaBtn}>
-              Get a Proposal
+              Bring Your Brief
             </Link>
             <button
               className={styles.hamburger}
@@ -116,7 +116,7 @@ export default function Navigation({ forceDark = false }: NavigationProps) {
         </div>
 
         <Link href={`/get-a-proposal${langParam}`} className={styles.mobileCtaBtn} onClick={closeMenu}>
-          Get a Proposal →
+          Bring Your Brief →
         </Link>
       </div>
     </>
