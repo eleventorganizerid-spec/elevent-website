@@ -53,10 +53,10 @@ export default function Hero({ lang }: Props) {
 
         <div className={styles.ctas}>
           <a href={`/get-a-proposal${langParam}`} className={styles.btnPrimary}>
-            {isEn ? 'Bring Your Brief →' : 'Ajukan Brief →'}
+            Bring Your Brief →
           </a>
           <a href={`/work${langParam}`} className={styles.btnText}>
-            {isEn ? 'View The Work' : 'Lihat Karya Kami'}
+            View The Work
           </a>
         </div>
       </div>
