@@ -26,19 +26,28 @@ export default function WhatWeDo({ lang }: Props) {
           <div className={styles.bodyTexts}>
             <p className={styles.bodyText}>
               {isEn ? (
-                <>Elevent is an enterprise event organizer platform — from gala dinners to hybrid conferences, <span style={{color: 'var(--sienna)'}}>from 100 to 5,000 attendees.</span></>
+                <>Elevent handles corporate events for enterprise companies: gala dinners, conferences, team building, roadshows, and incentive trips.</>
               ) : (
-                <>Elevent adalah platform event organizer untuk perusahaan enterprise, dari gala dinner hingga hybrid conference, <span style={{color: 'var(--sienna)'}}>dari 100 hingga 5.000 peserta.</span></>
+                <>Elevent menangani corporate event untuk perusahaan enterprise: gala dinner, conference, team building, roadshow, hingga incentive trip.</>
+              )}
+            </p>
+            <p className={styles.bodyText}>
+              {isEn ? (
+                <>Every event has a business objective behind it. We start there. Not from a vendor checklist.</>
+              ) : (
+                <>Setiap event punya satu tujuan bisnis di baliknya. Kami mulai dari sana, bukan dari checklist vendor.</>
+              )}
+            </p>
+            <p className={styles.bodyText}>
+              {isEn ? (
+                <>Elevent matches every brief with a specialist team that has run the same format multiple times before. <em>No generalists learning on your project.</em></>
+              ) : (
+                <>Elevent mencocokkan setiap brief dengan tim spesialis yang telah menjalankan format yang sama berulang kali. <em>Tidak ada generalis yang sedang belajar di proyek Anda.</em></>
               )}
             </p>
             <p className={styles.bodyText}>
               {isEn
-                ? <>Elevent matches every brief with a specialist team that has run the same format multiple times. <em>No generalists learning on your project.</em></>
-                : <>Elevent mencocokkan setiap brief dengan tim spesialis yang telah menjalankan format yang sama berulang kali. <em>Tidak ada generalis yang sedang belajar di proyek Anda.</em></>}
-            </p>
-            <p className={styles.bodyText}>
-              {isEn
-                ? 'One contact. One standard. Full accountability from the first brief to the last guest leaving.'
+                ? 'One contact. One standard. Full accountability from the first brief to the last guest out the door.'
                 : 'Satu kontak. Satu standar. Akuntabilitas penuh dari brief pertama hingga tamu terakhir pulang.'}
             </p>
           </div>
