@@ -15,6 +15,46 @@ interface Props {
   searchParams: Promise<{ lang?: string }>
 }
 
+function ServiceJsonLd({ service, slug, isEn }: {
+  service: SanityServiceFull
+  slug: string
+  isEn: boolean
+}) {
+  const description = isEn
+    ? (service.descriptorEn ?? service.descriptor)
+    : (service.descriptor ?? service.descriptorEn)
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description,
+    url: `https://elevent.id/services/${slug}`,
+    provider: {
+      '@type': 'Organization',
+      name: 'Elevent',
+      url: 'https://elevent.id',
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Indonesia',
+    },
+    serviceType: 'Corporate Event Organization',
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: `https://elevent.id/services/${slug}`,
+      availableLanguage: ['Indonesian', 'English'],
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 const PLACEHOLDER_HERO = 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=1920&q=80'
 const PLACEHOLDER_CARD = 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80'
 
@@ -83,6 +123,7 @@ export default async function ServiceDetailPage({ params, searchParams }: Props)
   return (
     <>
       <Navigation forceDark={true} />
+      <ServiceJsonLd service={service} slug={slug} isEn={isEn} />
       <main className={styles.main}>
 
         {/* ── 1. HERO ──────────────────────────────────────────────────── */}
