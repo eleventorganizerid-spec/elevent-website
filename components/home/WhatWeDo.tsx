@@ -26,9 +26,9 @@ export default function WhatWeDo({ lang }: Props) {
           <div className={styles.bodyTexts}>
             <p className={styles.bodyText}>
               {isEn ? (
-                <>Elevent handles corporate events for enterprise companies: gala dinners, conferences, team building, roadshows, and incentive trips.</>
+                <>Elevent handles corporate events for enterprise companies: <Link href={`/services/gala-dinner-award-night${langParam}`}>gala dinners</Link>, <Link href={`/services/conference-seminar${langParam}`}>conferences</Link>, <Link href={`/services/team-building${langParam}`}>team building</Link>, <Link href={`/services/roadshow${langParam}`}>roadshows</Link>, and <Link href={`/services/incentive-trip${langParam}`}>incentive trips</Link>.</>
               ) : (
-                <>Elevent menangani corporate event untuk perusahaan enterprise: gala dinner, conference, team building, roadshow, hingga incentive trip.</>
+                <>Elevent menangani corporate event untuk perusahaan enterprise: <Link href={`/services/gala-dinner-award-night${langParam}`}>gala dinner</Link>, <Link href={`/services/conference-seminar${langParam}`}>conference</Link>, <Link href={`/services/team-building${langParam}`}>team building</Link>, <Link href={`/services/roadshow${langParam}`}>roadshow</Link>, hingga <Link href={`/services/incentive-trip${langParam}`}>incentive trip</Link>.</>
               )}
             </p>
             <p className={styles.bodyText}>
@@ -46,9 +46,11 @@ export default function WhatWeDo({ lang }: Props) {
               )}
             </p>
             <p className={styles.bodyText}>
-              {isEn
-                ? 'One contact. One standard. Full accountability from the first brief to the last guest out the door.'
-                : 'Satu kontak. Satu standar. Akuntabilitas penuh dari brief pertama hingga tamu terakhir pulang.'}
+              {isEn ? (
+                <><span style={{color: 'var(--sienna)'}}>One contact. One standard.</span> Full accountability from the first brief to the last guest out the door.</>
+              ) : (
+                <><span style={{color: 'var(--sienna)'}}>Satu kontak. Satu standar.</span> Akuntabilitas penuh dari brief pertama hingga tamu terakhir pulang.</>
+              )}
             </p>
           </div>
           <Link href={`/about${langParam}`} className={styles.cityLabel}>
