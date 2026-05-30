@@ -187,11 +187,22 @@
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     padding: 24px 24px 48px;
+    gap: 16px;
   }
 
   .serviceCard {
-    height: 320px;
+    height: 260px;
+  }
+
+  .cardTitle {
+    font-size: clamp(20px, 5.5vw, 26px);
+    line-height: 1.2;
+  }
+
+  .cardTagline {
+    font-size: 13px;
+    line-height: 1.5;
   }
 }
