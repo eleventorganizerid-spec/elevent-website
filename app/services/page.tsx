@@ -36,11 +36,13 @@ const CLUSTERS = [
 void CLUSTERS // retained for reference — rendering handled by ServicesGrid
 
 /* ─── stats ─────────────────────────────────────────────────────────── */
-const STATS = [
-  { num: '16', label: 'Format yang kami kuasai' },
-  { num: '3',  label: 'Kota utama operasi' },
-  { num: '1',  label: 'Standar di semua format' },
-]
+function getStats(isEn: boolean) {
+  return [
+    { num: '16', label: isEn ? 'Event formats we master' : 'Format yang kami kuasai' },
+    { num: '3',  label: isEn ? 'Primary cities' : 'Kota utama operasi' },
+    { num: '1',  label: isEn ? 'Standard across all formats' : 'Standar di semua format' },
+  ]
+}
 
 interface Props {
   searchParams: Promise<{ lang?: string }>
@@ -48,6 +50,7 @@ interface Props {
 
 export default async function ServicesPage({ searchParams }: Props) {
   const { lang } = await searchParams
+  const isEn = lang === 'en'
   let services: SanityService[] = []
   try {
     const data = await client.fetch<SanityService[]>(servicesQuery)
@@ -71,8 +74,9 @@ export default async function ServicesPage({ searchParams }: Props) {
             </h1>
           </AnimateIn>
           <AnimateIn delay={0.2} className={styles.pageSub}>
-            Dari konferensi korporat hingga aktivasi brand — kami merancang setiap
-            format dengan intensitas yang sama.
+            {isEn
+              ? 'From corporate conferences to brand activations. We design every format with the same intensity.'
+              : 'Dari konferensi korporat hingga aktivasi brand. Kami merancang setiap format dengan intensitas yang sama.'}
           </AnimateIn>
         </section>
 
@@ -86,20 +90,20 @@ export default async function ServicesPage({ searchParams }: Props) {
             <div className={styles.standaloneLeft}>
               <p className={styles.standaloneLabel}>END-TO-END PRODUCTION</p>
               <h2 className={styles.standaloneHeadline}>
-                Tidak yakin format mana yang tepat?
+                {isEn ? 'Not sure which format fits?' : 'Tidak yakin format mana yang tepat?'}
               </h2>
               <p className={styles.standaloneBody}>
-                Mulai dari sini. Kami bantu Anda mendefinisikan format, skala, dan
-                pendekatan yang paling sesuai dengan tujuan bisnis Anda — sebelum satu
-                rupiah pun dianggarkan.
+                {isEn
+                  ? 'Start here. We help you define the format, scale, and approach that fits your business objective. Before a single budget line is written.'
+                  : 'Mulai dari sini. Kami bantu Anda mendefinisikan format, skala, dan pendekatan yang paling sesuai dengan tujuan bisnis Anda. Sebelum satu rupiah pun dianggarkan.'}
               </p>
               <Link href="/services/corporate-event-organizer" className={styles.standaloneLink}>
-                Lihat Corporate Event Organizer →
+                {isEn ? 'View Corporate Event Organizer →' : 'Lihat Corporate Event Organizer →'}
               </Link>
             </div>
 
             <div className={styles.standaloneRight}>
-              {STATS.map((stat, i) => (
+              {getStats(isEn).map((stat, i) => (
                 <div
                   key={stat.num}
                   className={`${styles.statItem} ${i > 0 ? styles.statBorder : ''}`}
