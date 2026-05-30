@@ -168,21 +168,21 @@
     grid-column: 2;
     text-align: right;
     color: var(--sienna);
-    font-family: var(--font-instrument-serif), serif;
-    font-size: 20px;
-    opacity: 0.5;
-    letter-spacing: -4px;
+    font-family: var(--font-jetbrains-mono), monospace;
+    font-size: 12px;
+    letter-spacing: -1px;
+    opacity: 0.55;
     transform: translateX(0);
     transition: opacity 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease;
     align-self: end;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
   }
 
   .row:hover .mobileArrow,
   .row:active .mobileArrow {
     opacity: 1;
-    letter-spacing: 2px;
-    transform: translateX(4px);
+    letter-spacing: 3px;
+    transform: translateX(6px);
   }
 
   .rowDesc {
