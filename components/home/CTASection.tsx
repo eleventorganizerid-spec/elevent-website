@@ -52,7 +52,7 @@ export default function CTASection({ lang, showLabel = false }: Props) {
                 GET A PROPOSAL →
               </a>
               <a href={`/contact${langParam}`} className={styles.btnGhost}>
-                {isEn ? 'TALK TO OUR TEAM' : 'HUBUNGI KAMI'}
+                TALK TO US
               </a>
             </div>
           </div>
