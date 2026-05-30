@@ -119,15 +119,16 @@
   }
 
   .colHeadline {
-    padding: 0 var(--page-pad) 16px var(--page-pad);
-    gap: 12px;
+    padding: clamp(32px, 5vw, 48px) var(--page-pad) 12px var(--page-pad);
+    gap: 10px;
     border-bottom: none;
   }
 
   .colBody {
-    padding: 16px var(--page-pad) var(--section-pad-y) var(--page-pad);
+    padding: 12px var(--page-pad) clamp(40px, 6vw, 60px) var(--page-pad);
     border-left: none;
     border-top: none;
+    gap: 18px;
   }
 }
 
