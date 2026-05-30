@@ -49,7 +49,7 @@
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: rgba(247, 244, 239, 0.55);
   margin-bottom: 40px;
 }
 
