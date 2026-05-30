@@ -123,7 +123,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
         {/* ── 3. MAP ────────────────────────────────────────────────── */}
         <div className={styles.mapSection}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990!2d106.81265!3d-6.29497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1b0ef16f27f%3A0x88bec3cf47b0cee6!2sAD%20Premier%20Office%20Park!5e0!3m2!1sen!2sid!4v1700000000000"
+            src="https://maps.google.com/maps?q=AD+Premier+Office+Park,+Jl.+TB+Simatupang+No.5,+Pasar+Minggu,+Jakarta+Selatan+12550&t=&z=17&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="480"
             style={{ border: 0, display: 'block', filter: 'contrast(1.1) saturate(0.6)' }}
