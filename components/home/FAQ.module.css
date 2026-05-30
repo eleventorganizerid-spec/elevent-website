@@ -56,23 +56,20 @@
   background: none;
   border: none;
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: none;
 }
 
 .trigger:hover {
-  background: var(--ink);
-}
-
-.trigger:hover .triggerNumber {
-  color: rgba(247, 244, 239, 0.45);
+  background: none;
 }
 
 .trigger:hover .triggerQuestion {
-  color: var(--chalk);
+  color: var(--ink);
+  background-size: 100% 1px;
 }
 
 .trigger:hover .triggerToggle {
-  color: var(--chalk);
+  color: var(--sienna);
 }
 
 .triggerNumber {
@@ -87,7 +84,11 @@
   font-size: clamp(17px, 1.6vw, 22px);
   color: var(--stone);
   line-height: 1.35;
-  transition: color 0.2s ease;
+  background-image: linear-gradient(var(--sienna), var(--sienna));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: color 0.2s ease, background-size 0.3s ease;
 }
 
 .itemOpen .triggerQuestion {
