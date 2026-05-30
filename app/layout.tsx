@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Instrument_Serif, Hanken_Grotesk, JetBrains_Mono } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import WhatsAppButton from '@/components/ui/WhatsAppButton'
 import JsonLd from '@/components/seo/JsonLd'
 import './globals.css'
@@ -82,6 +83,7 @@ export default function RootLayout({
         <JsonLd />
         {children}
         <WhatsAppButton />
+        <GoogleAnalytics gaId="G-ESWHLBLEN3" />
       </body>
     </html>
   )
