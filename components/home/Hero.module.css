@@ -153,9 +153,4 @@
     align-items: flex-start;
     gap: 16px;
   }
-
-  .btnPrimary {
-    width: 100%;
-    text-align: center;
-  }
 }
