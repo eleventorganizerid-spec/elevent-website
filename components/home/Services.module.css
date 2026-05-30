@@ -1,3 +1,5 @@
+.mobileArrow { display: none; }
+
 .section {
   background: var(--chalk);
   padding-top: var(--section-pad-y);
@@ -159,6 +161,27 @@
   .rowName {
     grid-column: 2;
     font-size: clamp(26px, 6vw, 32px);
+  }
+
+  .mobileArrow {
+    display: block;
+    grid-column: 2;
+    text-align: right;
+    color: var(--sienna);
+    font-family: var(--font-jetbrains-mono), monospace;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    transform: translateX(0);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    align-self: end;
+    padding-bottom: 2px;
+  }
+
+  .row:hover .mobileArrow,
+  .row:active .mobileArrow {
+    opacity: 1;
+    transform: translateX(4px);
   }
 
   .rowDesc {
