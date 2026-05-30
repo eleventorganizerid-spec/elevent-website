@@ -126,6 +126,7 @@
   }
 
   .quoteText {
-    font-size: clamp(20px, 5vw, 28px);
+    font-size: clamp(24px, 6.5vw, 34px);
+    line-height: 1.35;
   }
 }
