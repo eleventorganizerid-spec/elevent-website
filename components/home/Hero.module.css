@@ -153,4 +153,11 @@
     align-items: flex-start;
     gap: 16px;
   }
+
+  .btnText {
+    font-family: var(--font-jetbrains-mono), monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
 }
