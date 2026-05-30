@@ -7,7 +7,7 @@ export default function Testimonial() {
       {/* Photo background */}
       <div className={styles.photoBg}>
         <Image
-          src="https://cdn.sanity.io/images/98jwav2j/production/ad3222428130cc20e627cb9e2b2b15b2ebe8a5df-1920x1252.jpg"
+          src="https://cdn.sanity.io/images/98jwav2j/production/b0c31b65b6e53858972903ab3d6a151e629ebed0-1920x1280.jpg"
           fill
           alt=""
           sizes="100vw"
