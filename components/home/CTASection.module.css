@@ -134,3 +134,14 @@
     display: none;
   }
 }
+
+@media (max-width: 767px) {
+  .headline {
+    font-size: clamp(2rem, 8.5vw, 3rem);
+  }
+
+  .subcopy {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}

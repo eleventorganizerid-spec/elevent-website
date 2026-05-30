@@ -132,6 +132,11 @@
     font-size: clamp(2rem, 9vw, 3rem);
   }
 
+  .triggerQuestion {
+    font-size: clamp(15px, 4vw, 18px);
+    line-height: 1.4;
+  }
+
   .trigger {
     grid-template-columns: 40px 1fr 28px;
     gap: 12px;
@@ -139,5 +144,7 @@
 
   .answerInner {
     padding-left: 52px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
