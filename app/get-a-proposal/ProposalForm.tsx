@@ -317,7 +317,7 @@ export default function ProposalForm() {
             id="tanggalEvent"
             name="tanggalEvent"
             type="date"
-            className={styles.fieldInput}
+            className={`${styles.fieldInput} ${styles.dateInput}`}
             value={formData.tanggalEvent}
             onChange={handleChange}
           />

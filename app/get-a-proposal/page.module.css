@@ -333,7 +333,7 @@
 }
 
 /* ── Date input alignment ──────────────────────── */
-input[type="date"] {
+.dateInput {
   text-align: left;
 }
 
@@ -351,8 +351,7 @@ input[type="date"] {
     grid-template-columns: 1fr;
   }
 
-  input[type="date"].fieldInput,
-  .fieldInput[type="date"] {
+  .dateInput {
     text-align: left;
     display: block;
     width: 100%;
