@@ -58,11 +58,20 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   try {
     const article = await client.fetch<Insight | null>(articleBySlugQuery, { slug })
     if (!article) return {}
-    const displayTitle   = isEn ? (article.title   ?? article.titleId)  : (article.titleId  ?? article.title)
-    const displayExcerpt = isEn ? (article.excerptEn ?? article.excerpt) : (article.excerpt  ?? article.excerptEn)
+    const displayTitle = isEn ? (article.title ?? article.titleId) : (article.titleId ?? article.title)
+    const displayExcerpt = isEn ? (article.excerptEn ?? article.excerpt) : (article.excerpt ?? article.excerptEn)
     return {
-      title: `${displayTitle} | Elevent Insights`,
+      title: `${displayTitle} — Elevent`,
       description: displayExcerpt,
+      alternates: {
+        canonical: `https://elevent.id/insights/${slug}`,
+      },
+      openGraph: {
+        title: `${displayTitle} — Elevent`,
+        description: displayExcerpt,
+        url: `https://elevent.id/insights/${slug}`,
+        images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+      },
     }
   } catch {
     return {}

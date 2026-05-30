@@ -40,10 +40,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const service = await client.fetch<SanityServiceFull | null>(serviceBySlugQuery, { slug })
     if (!service) return {}
-    const description = service.taglineId ?? service.tagline ?? service.descriptor ?? service.descriptorEn
+    const description = service.descriptorEn ?? service.descriptor ?? service.tagline ?? service.taglineId
     return {
-      title: `${service.title} | Elevent — Corporate Event Organizer`,
+      title: `${service.title} — Elevent`,
       description,
+      alternates: {
+        canonical: `https://elevent.id/services/${slug}`,
+      },
+      openGraph: {
+        title: `${service.title} — Elevent`,
+        description,
+        url: `https://elevent.id/services/${slug}`,
+        images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+      },
     }
   } catch {
     return {}

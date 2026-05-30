@@ -27,11 +27,22 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   } catch {
     // Sanity unavailable
   }
-  if (!cs) return { title: 'Case Study | Elevent' }
-  const description = [cs.format, cs.client ? `untuk ${cs.client}` : null, cs.year].filter(Boolean).join(' — ')
+  if (!cs) return { title: 'Case Study — Elevent' }
+  const description = isEn
+    ? [cs.format, cs.client ? `for ${cs.client}` : null, cs.year].filter(Boolean).join(', ')
+    : [cs.format, cs.client ? `untuk ${cs.client}` : null, cs.year].filter(Boolean).join(' — ')
   return {
-    title: `${cs.title} | Elevent Work`,
+    title: `${cs.title} — Elevent`,
     description,
+    alternates: {
+      canonical: `https://elevent.id/work/${slug}`,
+    },
+    openGraph: {
+      title: `${cs.title} — Elevent`,
+      description,
+      url: `https://elevent.id/work/${slug}`,
+      images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+    },
   }
 }
 
