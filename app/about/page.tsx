@@ -7,9 +7,17 @@ import CTASection from '@/components/home/CTASection'
 import styles from './about.module.css'
 
 export const metadata: Metadata = {
-  title: 'About | Elevent',
-  description:
-    'Elevent adalah mitra event strategis untuk perusahaan enterprise di Indonesia — platform kurasi yang menggabungkan akuntabilitas penuh dengan spesialisasi format.',
+  title: 'About — Elevent',
+  description: 'Elevent is a strategic event partner for enterprise companies in Indonesia. A curated platform model matching every brief with the right specialist team.',
+  alternates: {
+    canonical: 'https://elevent.id/about',
+  },
+  openGraph: {
+    title: 'About — Elevent',
+    description: 'Elevent is a strategic event partner for enterprise companies in Indonesia.',
+    url: 'https://elevent.id/about',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 const beliefs = [

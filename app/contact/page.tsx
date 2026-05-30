@@ -6,9 +6,17 @@ import CTASection from '@/components/home/CTASection'
 import styles from './contact.module.css'
 
 export const metadata: Metadata = {
-  title: 'Contact — ELEVENT',
-  description:
-    'Hubungi ELEVENT untuk pertanyaan, kunjungi kantor kami di Jakarta, atau kirimkan brief Anda.',
+  title: 'Contact — Elevent',
+  description: 'Get in touch with Elevent. Submit a brief, visit our Jakarta office, or reach us via WhatsApp. We respond within one working day.',
+  alternates: {
+    canonical: 'https://elevent.id/contact',
+  },
+  openGraph: {
+    title: 'Contact — Elevent',
+    description: 'Submit a brief or get in touch with Elevent. We respond within one working day.',
+    url: 'https://elevent.id/contact',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {

@@ -11,9 +11,17 @@ import CTASection from '@/components/home/CTASection'
 import styles from './services.module.css'
 
 export const metadata: Metadata = {
-  title: 'Services | Elevent',
-  description:
-    'Sembilan format event korporat yang kami kuasai — dari konferensi enterprise hingga incentive trip, semua dengan satu standar akuntabilitas.',
+  title: 'Services — Elevent',
+  description: 'Nine corporate event formats for enterprise companies in Indonesia. Gala dinners, conferences, team building, roadshows, incentive trips. One standard across all.',
+  alternates: {
+    canonical: 'https://elevent.id/services',
+  },
+  openGraph: {
+    title: 'Services — Elevent',
+    description: 'Nine corporate event formats for enterprise companies in Indonesia.',
+    url: 'https://elevent.id/services',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 /* ─── cluster config (retained for reference) ───────────────────────── */

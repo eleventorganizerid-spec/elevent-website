@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '@/components/layout/Navigation'
@@ -9,9 +10,18 @@ import type { SanityCaseStudy } from '@/lib/types'
 import CTASection from '@/components/home/CTASection'
 import styles from './page.module.css'
 
-export const metadata = {
-  title: 'Our Work — ELEVENT',
-  description: 'Events that left the room different.',
+export const metadata: Metadata = {
+  title: 'Our Work — Elevent',
+  description: 'Case studies from enterprise events across Indonesia. See how Elevent has directed outcomes for corporate clients in Jakarta, Bali, and Surabaya.',
+  alternates: {
+    canonical: 'https://elevent.id/work',
+  },
+  openGraph: {
+    title: 'Our Work — Elevent',
+    description: 'Case studies from enterprise events across Indonesia.',
+    url: 'https://elevent.id/work',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 const PLACEHOLDER_IMG = 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80'

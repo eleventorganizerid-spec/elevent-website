@@ -10,9 +10,17 @@ import CTASection from '@/components/home/CTASection'
 import styles from './insights.module.css'
 
 export const metadata: Metadata = {
-  title: 'Insights — ELEVENT',
-  description:
-    'Panduan, analisis, dan sudut pandang tentang corporate event untuk GA Manager, CorpComm, dan siapapun yang bertanggung jawab atas kalender event perusahaan.',
+  title: 'Insights — Elevent',
+  description: 'Guides, analysis, and perspectives on corporate events for GA Managers, CorpComm teams, and anyone responsible for their company event calendar.',
+  alternates: {
+    canonical: 'https://elevent.id/insights',
+  },
+  openGraph: {
+    title: 'Insights — Elevent',
+    description: 'Guides and perspectives on corporate events for enterprise teams in Indonesia.',
+    url: 'https://elevent.id/insights',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 function formatDate(dateString: string, isEn: boolean): string {

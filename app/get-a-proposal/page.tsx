@@ -1,10 +1,20 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import ProposalForm from './ProposalForm'
 import styles from './page.module.css'
 
-export const metadata = {
-  title: 'Get a Proposal — ELEVENT',
-  description: 'Tell us about your event. We respond within one business day.',
+export const metadata: Metadata = {
+  title: 'Get a Proposal — Elevent',
+  description: 'Submit your event brief to Elevent. Tell us about your company, event format, audience size, and timeline. We will respond within one working day.',
+  alternates: {
+    canonical: 'https://elevent.id/get-a-proposal',
+  },
+  openGraph: {
+    title: 'Get a Proposal — Elevent',
+    description: 'Submit your event brief to Elevent. We respond within one working day.',
+    url: 'https://elevent.id/get-a-proposal',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 export default function GetAProposalPage() {
