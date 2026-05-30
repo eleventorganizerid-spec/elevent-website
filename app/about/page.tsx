@@ -268,7 +268,7 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
             <Image
               src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=1920&q=80"
               fill
-              alt="Indonesia cityscape"
+              alt="Elevent — Corporate Event Organizer Jakarta, Indonesia"
               sizes="100vw"
               style={{ objectFit: 'cover', filter: 'saturate(0.85)' }}
             />
