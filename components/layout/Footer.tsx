@@ -12,7 +12,7 @@ const footerServices = [
   { label: 'Conference & Seminar', slug: 'conference-seminar'      },
 ]
 
-const footerCities = ['Jakarta', 'Bali', 'Surabaya', 'Bandung · Medan · Makassar']
+const footerCities = ['Jakarta', 'Bali', 'Surabaya', 'Bandung', 'Medan', 'Makassar']
 
 const footerElsewhere = [
   { label: 'LinkedIn',  href: 'https://linkedin.com/company/elevent-id' },
