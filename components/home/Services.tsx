@@ -54,7 +54,7 @@ export default function Services({ services, lang }: Props) {
                 </span>
                 <span className={styles.rowDesc}>{desc}</span>
                 <span className={styles.rowExplore}>EXPLORE →</span>
-                <span className={styles.mobileArrow}>→</span>
+                <span className={styles.mobileArrow}>»</span>
               </Link>
             )
           })}
