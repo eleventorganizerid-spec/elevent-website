@@ -119,13 +119,13 @@
   }
 
   .colHeadline {
-    padding-bottom: 8px;
+    padding: 0 var(--page-pad) 16px var(--page-pad);
     gap: 12px;
     border-bottom: none;
   }
 
   .colBody {
-    padding: 0 var(--page-pad);
+    padding: 16px var(--page-pad) var(--section-pad-y) var(--page-pad);
     border-left: none;
     border-top: none;
   }
