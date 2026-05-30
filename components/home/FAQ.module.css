@@ -55,17 +55,18 @@
   text-align: left;
   background: none;
   border: none;
+  border-left: 2px solid transparent;
   cursor: pointer;
-  transition: none;
+  transition: border-color 0.25s ease;
 }
 
 .trigger:hover {
   background: none;
+  border-left: 2px solid var(--sienna);
 }
 
 .trigger:hover .triggerQuestion {
   color: var(--ink);
-  background-size: 100% 1px;
 }
 
 .trigger:hover .triggerToggle {
@@ -84,11 +85,7 @@
   font-size: clamp(17px, 1.6vw, 22px);
   color: var(--stone);
   line-height: 1.35;
-  background-image: linear-gradient(var(--sienna), var(--sienna));
-  background-size: 0% 1px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  transition: color 0.2s ease, background-size 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .itemOpen .triggerQuestion {
