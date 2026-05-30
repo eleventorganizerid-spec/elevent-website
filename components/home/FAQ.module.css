@@ -116,7 +116,7 @@
 }
 
 .answerInner {
-  padding: 0 0 24px 68px;
+  padding: 0 0 24px 92px;
   font-size: 16px;
   line-height: 1.7;
   color: var(--stone);
@@ -143,7 +143,7 @@
   }
 
   .answerInner {
-    padding-left: 52px;
+    padding-left: 76px;
     font-size: 14px;
     line-height: 1.6;
   }
