@@ -14,7 +14,7 @@ export default function Hero({ lang }: Props) {
       {/* Media layer */}
       <div className={styles.media}>
         <Image
-          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
+          src="https://cdn.sanity.io/images/98jwav2j/production/b0c31b65b6e53858972903ab3d6a151e629ebed0-1920x1280.jpg"
           fill
           alt=""
           priority
