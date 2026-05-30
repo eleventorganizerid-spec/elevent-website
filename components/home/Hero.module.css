@@ -148,4 +148,14 @@
     margin-left: 0;
   }
 
+  .ctas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .btnPrimary {
+    width: 100%;
+    text-align: center;
+  }
 }
