@@ -20,7 +20,6 @@ export default function CTASection({ lang, showLabel = false }: Props) {
           fill
           alt=""
           sizes="100vw"
-          unoptimized
           style={{ objectFit: 'cover', filter: 'saturate(0.85)' }}
         />
         <div className={styles.bgOverlay} />

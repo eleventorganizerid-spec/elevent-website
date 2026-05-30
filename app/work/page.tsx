@@ -77,7 +77,6 @@ export default async function WorkPage({ searchParams }: { searchParams: Promise
                       fill
                       alt={cs.title}
                       sizes="280px"
-                      unoptimized
                       style={{ objectFit: 'cover', filter: 'saturate(0.85)' }}
                     />
                   </div>

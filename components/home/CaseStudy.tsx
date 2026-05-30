@@ -56,7 +56,6 @@ export default async function CaseStudy({ lang }: Props) {
               fill
               alt="Shimizu Corporation 50th Anniversary Gala Dinner"
               sizes="(max-width: 767px) 100vw, 60vw"
-              unoptimized
               style={{ objectFit: 'cover', filter: 'saturate(0.85)' }}
             />
             <div className={styles.photoOverlay} />
