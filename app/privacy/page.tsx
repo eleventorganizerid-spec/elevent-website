@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import styles from './privacy.module.css'
@@ -9,7 +10,7 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <>
+    <Suspense>
       <Navigation />
       <main className={styles.main}>
         <div className={styles.inner}>
@@ -39,6 +40,6 @@ export default function PrivacyPage() {
         </div>
       </main>
       <Footer />
-    </>
+    </Suspense>
   )
 }
