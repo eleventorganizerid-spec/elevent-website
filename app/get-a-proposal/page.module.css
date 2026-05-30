@@ -332,6 +332,11 @@
   color: var(--stone);
 }
 
+/* ── Date input alignment ──────────────────────── */
+input[type="date"] {
+  text-align: left;
+}
+
 /* ── Mobile ────────────────────────────────────── */
 @media (max-width: 899px) {
   .grid {
@@ -344,5 +349,12 @@
 
   .formRow {
     grid-template-columns: 1fr;
+  }
+
+  input[type="date"].fieldInput,
+  .fieldInput[type="date"] {
+    text-align: left;
+    display: block;
+    width: 100%;
   }
 }

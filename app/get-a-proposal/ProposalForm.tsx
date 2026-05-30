@@ -121,7 +121,63 @@ export default function ProposalForm() {
       document.getElementById(firstKey)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
       return
     }
-    console.log('Proposal brief submitted:', formData)
+    const eventLabels: Record<string, string> = {
+      'corporate-event': 'Corporate Event',
+      'corporate-gathering': 'Corporate Gathering',
+      'gala-dinner': 'Gala Dinner & Award Night',
+      'conference-seminar': 'Conference & Seminar',
+      'team-building': 'Team Building',
+      'product-launching': 'Product Launching',
+      'hybrid-virtual': 'Hybrid & Virtual Event',
+      'incentive-trip': 'Incentive Trip',
+      'mice-hospitality': 'MICE & Hospitality',
+      'roadshow': 'Roadshow',
+      'lainnya': 'Lainnya',
+    }
+
+    const budgetLabels: Record<string, string> = {
+      'under-100': 'Di bawah Rp 100 juta',
+      '100-300': 'Rp 100 juta - 300 juta',
+      '300-500': 'Rp 300 juta - 500 juta',
+      '500-1000': 'Rp 500 juta - 1 miliar',
+      'above-1000': 'Di atas Rp 1 miliar',
+    }
+
+    const pesertaLabels: Record<string, string> = {
+      'under-100': 'Di bawah 100 orang',
+      '100-300': '100 - 300 orang',
+      '300-500': '300 - 500 orang',
+      '500-1000': '500 - 1.000 orang',
+      '1000-3000': '1.000 - 3.000 orang',
+      'above-3000': 'Di atas 3.000 orang',
+    }
+
+    const formatDate = (dateStr: string) => {
+      if (!dateStr) return '-'
+      const date = new Date(dateStr)
+      return date.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })
+    }
+
+    const message = [
+      'Halo Elevent, berikut detail kebutuhan event kami:',
+      '',
+      `*Nama:* ${formData.nama}`,
+      `*Perusahaan:* ${formData.perusahaan}`,
+      `*Jabatan:* ${formData.jabatan || '-'}`,
+      `*Email:* ${formData.email}`,
+      `*WhatsApp:* ${formData.whatsapp}`,
+      `*Jenis Event:* ${eventLabels[formData.jenisEvent] || formData.jenisEvent || '-'}`,
+      `*Jumlah Peserta:* ${pesertaLabels[formData.jumlahPeserta] || formData.jumlahPeserta || '-'}`,
+      `*Tanggal Event:* ${formatDate(formData.tanggalEvent)}`,
+      `*Kota:* ${formData.kota || '-'}`,
+      `*Budget:* ${budgetLabels[formData.budget] || formData.budget || '-'}`,
+      '',
+      `*Brief:*`,
+      formData.brief,
+    ].join('\n')
+
+    const waUrl = `https://wa.me/6281210704448?text=${encodeURIComponent(message)}`
+    window.open(waUrl, '_blank')
     setSubmitted(true)
   }
 
