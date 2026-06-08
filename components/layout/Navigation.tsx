@@ -55,7 +55,7 @@ export default function Navigation({ forceDark = false }: NavigationProps) {
 
           <Link href={`/${langParam}`} className={styles.logo} onClick={closeMenu}>
             <Image
-              src="/assets/logo-light.png"
+              src={scrolled ? '/assets/logo-dark.png' : '/assets/logo-light.png'}
               alt="Elevent"
               width={120}
               height={60}
