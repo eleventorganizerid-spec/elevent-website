@@ -57,8 +57,8 @@ export default function Navigation({ forceDark = false }: NavigationProps) {
             <Image
               src={scrolled ? '/assets/logo-dark.png' : '/assets/logo-light.png'}
               alt="Elevent"
-              width={160}
-              height={40}
+              width={120}
+              height={60}
               style={{ objectFit: 'contain' }}
               priority
             />
