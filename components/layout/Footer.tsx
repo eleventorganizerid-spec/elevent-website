@@ -43,7 +43,7 @@ export default function Footer() {
                 alt="Elevent"
                 width={120}
                 height={60}
-                style={{ objectFit: 'contain' }}
+                style={{ objectFit: 'contain', marginLeft: '-12px' }}
               />
             </div>
             <p className={styles.brandDesc}>

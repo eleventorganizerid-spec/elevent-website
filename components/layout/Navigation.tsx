@@ -59,7 +59,7 @@ export default function Navigation({ forceDark = false }: NavigationProps) {
               alt="Elevent"
               width={120}
               height={60}
-              style={{ objectFit: 'contain' }}
+              style={{ objectFit: 'contain', marginLeft: '-12px' }}
               priority
             />
           </Link>
