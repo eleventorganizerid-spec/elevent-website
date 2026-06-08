@@ -39,7 +39,7 @@ export default function Footer() {
           <div className={styles.brand}>
             <div className={styles.logo}>
               <Image
-                src="/assets/logo-dark.png"
+                src="/assets/logo-light.png"
                 alt="Elevent"
                 width={120}
                 height={60}
