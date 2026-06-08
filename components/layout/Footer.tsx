@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import styles from './Footer.module.css'
@@ -17,7 +18,7 @@ const footerCities = ['Jakarta', 'Bali', 'Surabaya', 'Bandung', 'Medan', 'Makass
 const footerElsewhere = [
   { label: 'LinkedIn',  href: 'https://linkedin.com/company/elevent-id' },
   { label: 'YouTube',   href: 'https://youtube.com/@elevent'            },
-  { label: 'WhatsApp',  href: 'https://wa.me/6281210704448'              },
+  { label: 'WhatsApp',  href: 'https://wa.me/6285199333039'              },
 ]
 
 export default function Footer() {
@@ -37,7 +38,13 @@ export default function Footer() {
         <div className={styles.grid}>
           <div className={styles.brand}>
             <div className={styles.logo}>
-              ELE<span className={styles.logoV}>V</span>ENT
+              <Image
+                src="/assets/logo-dark.png"
+                alt="Elevent"
+                width={120}
+                height={60}
+                style={{ objectFit: 'contain' }}
+              />
             </div>
             <p className={styles.brandDesc}>
               {isEn
@@ -79,13 +86,13 @@ export default function Footer() {
             <p className={styles.colLabel}>Contact</p>
             <ul className={styles.colList}>
               <li>
-                <a href="mailto:halo@elevent.id" className={styles.colLink}>
-                  halo@elevent.id
+                <a href="mailto:brief@elevent.id" className={styles.colLink}>
+                  brief@elevent.id
                 </a>
               </li>
               <li>
-                <a href="tel:+6281210704448" className={styles.colLink}>
-                  +62 812 1070 4448
+                <a href="tel:+6285199333039" className={styles.colLink}>
+                  +62 851 9933 3039
                 </a>
               </li>
               <li>

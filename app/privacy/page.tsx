@@ -32,10 +32,10 @@ export default function PrivacyPage() {
             <p>This website uses cookies for analytics purposes (Google Analytics) to help us understand how visitors use our site. You may disable cookies in your browser settings.</p>
 
             <h2>5. Your Rights</h2>
-            <p>Under Indonesia&apos;s Personal Data Protection Law (UU PDP), you have the right to access, correct, or request deletion of your personal data. To exercise these rights, contact us at halo@elevent.id.</p>
+            <p>Under Indonesia&apos;s Personal Data Protection Law (UU PDP), you have the right to access, correct, or request deletion of your personal data. To exercise these rights, contact us at brief@elevent.id.</p>
 
             <h2>6. Contact</h2>
-            <p>For any privacy-related questions, please contact us at <a href="mailto:halo@elevent.id">halo@elevent.id</a>.</p>
+            <p>For any privacy-related questions, please contact us at <a href="mailto:brief@elevent.id">brief@elevent.id</a>.</p>
           </div>
         </div>
       </main>

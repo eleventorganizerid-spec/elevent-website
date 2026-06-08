@@ -176,7 +176,7 @@ export default function ProposalForm() {
       formData.brief,
     ].join('\n')
 
-    const waUrl = `https://wa.me/6281210704448?text=${encodeURIComponent(message)}`
+    const waUrl = `https://wa.me/6285199333039?text=${encodeURIComponent(message)}`
     window.open(waUrl, '_blank')
     setSubmitted(true)
   }

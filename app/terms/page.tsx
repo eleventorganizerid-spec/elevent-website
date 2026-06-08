@@ -41,7 +41,7 @@ export default function TermsPage() {
             <p>These terms are governed by the laws of the Republic of Indonesia.</p>
 
             <h2>8. Contact</h2>
-            <p>For questions regarding these terms, contact us at <a href="mailto:halo@elevent.id">halo@elevent.id</a>.</p>
+            <p>For questions regarding these terms, contact us at <a href="mailto:brief@elevent.id">brief@elevent.id</a></p>
           </div>
         </div>
       </main>

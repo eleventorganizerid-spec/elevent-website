@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import styles from './Navigation.module.css'
@@ -53,7 +54,14 @@ export default function Navigation({ forceDark = false }: NavigationProps) {
         <div className={styles.inner}>
 
           <Link href={`/${langParam}`} className={styles.logo} onClick={closeMenu}>
-            ELE<span className={styles.logoV}>V</span>ENT
+            <Image
+              src="/assets/logo-light.png"
+              alt="Elevent"
+              width={120}
+              height={60}
+              style={{ objectFit: 'contain' }}
+              priority
+            />
           </Link>
 
           <nav className={styles.nav} aria-label="Primary">

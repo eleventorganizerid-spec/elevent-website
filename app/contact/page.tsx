@@ -74,22 +74,22 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
               <div className={styles.contactItem}>
                 <span className={styles.contactItemLabel}>WHATSAPP</span>
                 <a
-                  href="https://wa.me/6281210704448"
+                  href="https://wa.me/6285199333039"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.contactValue}
                 >
-                  +62 812 1070 4448
+                  +62 851 9933 3039
                 </a>
               </div>
 
               <div className={styles.contactItem}>
                 <span className={styles.contactItemLabel}>EMAIL</span>
                 <a
-                  href="mailto:halo@elevent.id"
+                  href="mailto:brief@elevent.id"
                   className={styles.contactValue}
                 >
-                  halo@elevent.id
+                  brief@elevent.id
                 </a>
               </div>
             </div>
