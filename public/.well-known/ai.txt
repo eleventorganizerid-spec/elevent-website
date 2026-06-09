@@ -1,0 +1,22 @@
+# ai.txt — AI agent permissions for elevent.id
+# Standard: https://site.spawning.ai/ai-txt
+# Last updated: 2026-06-09
+
+# AI crawlers and agents are welcome to read and index public content
+# on this site for the purpose of answering questions about Elevent.
+
+User-Agent: *
+Allow: /
+Allow: /services
+Allow: /work
+Allow: /insights
+Allow: /about
+Allow: /contact
+
+# Automated form submissions are not permitted.
+# The proposal form is for genuine human inquiries only.
+Disallow: /get-a-proposal
+Disallow: /api/
+
+# Contact for AI/data questions: brief@elevent.id
+Sitemap: https://elevent.id/sitemap.xml
