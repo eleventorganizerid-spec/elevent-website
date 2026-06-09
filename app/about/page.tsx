@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import CTASection from '@/components/home/CTASection'
 import styles from './about.module.css'
 
@@ -104,6 +105,10 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
 
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'About', url: 'https://elevent.id/about' },
+      ]} />
       <Navigation forceDark />
       <main className={styles.main}>
 

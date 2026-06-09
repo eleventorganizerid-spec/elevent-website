@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import CTASection from '@/components/home/CTASection'
 import styles from './contact.module.css'
 
@@ -30,6 +31,10 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
 
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'Contact', url: 'https://elevent.id/contact' },
+      ]} />
       <Navigation forceDark />
       <main className={styles.main}>
 

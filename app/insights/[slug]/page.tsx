@@ -7,6 +7,7 @@ import { client } from '@/sanity/client'
 import { articleBySlugQuery, relatedInsightsQuery, insightsQuery } from '@/lib/queries'
 import type { Insight } from '@/lib/types'
 import CTASection from '@/components/home/CTASection'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import styles from './article.module.css'
 
 interface Props {
@@ -188,6 +189,11 @@ export default async function ArticlePage({ params, searchParams }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'Insights', url: 'https://elevent.id/insights' },
+        { name: displayTitle, url: `https://elevent.id/insights/${slug}` },
+      ]} />
       <Navigation forceDark={true} />
       <main className={styles.main}>
 

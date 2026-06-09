@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import { client } from '@/sanity/client'
 import { allCaseStudiesQuery } from '@/lib/queries'
 import type { SanityCaseStudy } from '@/lib/types'
@@ -46,6 +47,10 @@ export default async function WorkPage({ searchParams }: { searchParams: Promise
 
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'Our Work', url: 'https://elevent.id/work' },
+      ]} />
       <Navigation />
       <main className={styles.main}>
 

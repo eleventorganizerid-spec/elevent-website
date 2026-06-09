@@ -7,6 +7,7 @@ import { client } from '@/sanity/client'
 import { caseStudyBySlugQuery, relatedCaseStudiesQuery } from '@/lib/queries'
 import type { SanityCaseStudy } from '@/lib/types'
 import CTASection from '@/components/home/CTASection'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 interface Props {
@@ -91,6 +92,11 @@ export default async function CaseStudyPage({ params, searchParams }: Props) {
   return (
     <>
       <Navigation forceDark={true} />
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'Our Work', url: 'https://elevent.id/work' },
+        { name: displayTitle, url: `https://elevent.id/work/${slug}` },
+      ]} />
 
       <main className={styles.main}>
 

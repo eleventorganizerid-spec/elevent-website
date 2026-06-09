@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ProposalForm from './ProposalForm'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -25,6 +26,10 @@ export const metadata: Metadata = {
 export default function GetAProposalPage() {
   return (
     <div className={styles.page}>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'Get a Proposal', url: 'https://elevent.id/get-a-proposal' },
+      ]} />
       {/* Minimal header — logo only */}
       <header className={styles.header}>
         <Link href="/" className={styles.logo}>

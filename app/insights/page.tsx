@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import { client } from '@/sanity/client'
 import { insightsQuery } from '@/lib/queries'
 import type { Insight } from '@/lib/types'
@@ -60,6 +61,10 @@ export default async function InsightsPage({ searchParams }: Props) {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'Insights', url: 'https://elevent.id/insights' },
+      ]} />
       <Navigation />
       <main className={styles.main}>
 

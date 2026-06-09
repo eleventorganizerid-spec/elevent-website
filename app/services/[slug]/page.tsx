@@ -7,6 +7,7 @@ import { client } from '@/sanity/client'
 import { serviceBySlugQuery } from '@/lib/queries'
 import type { SanityServiceFull, SanityCaseStudy } from '@/lib/types'
 import ServiceFAQ from './ServiceFAQ'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import CTASection from '@/components/home/CTASection'
 import styles from './page.module.css'
 
@@ -45,6 +46,31 @@ function ServiceJsonLd({ service, slug, isEn }: {
       serviceUrl: `https://elevent.id/services/${slug}`,
       availableLanguage: ['Indonesian', 'English'],
     },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+function FaqJsonLd({ faqs, isEn }: {
+  faqs: NonNullable<SanityServiceFull['faqs']>
+  isEn: boolean
+}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: isEn ? (f.question ?? f.questionId) : (f.questionId ?? f.question),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: isEn ? (f.answer ?? f.answerId) : (f.answerId ?? f.answer),
+      },
+    })),
   }
 
   return (
@@ -129,6 +155,14 @@ export default async function ServiceDetailPage({ params, searchParams }: Props)
     <>
       <Navigation forceDark={true} />
       <ServiceJsonLd service={service} slug={slug} isEn={isEn} />
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'Services', url: 'https://elevent.id/services' },
+        { name: service.title, url: `https://elevent.id/services/${slug}` },
+      ]} />
+      {service.faqs && service.faqs.length > 0 && (
+        <FaqJsonLd faqs={service.faqs} isEn={isEn} />
+      )}
       <main className={styles.main}>
 
         {/* ── 1. HERO ──────────────────────────────────────────────────── */}

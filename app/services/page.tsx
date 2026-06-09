@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
+import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import { client } from '@/sanity/client'
 import { servicesQuery } from '@/lib/queries'
 import type { SanityService } from '@/lib/types'
@@ -66,6 +67,10 @@ export default async function ServicesPage({ searchParams }: Props) {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: 'Home', url: 'https://elevent.id' },
+        { name: 'Services', url: 'https://elevent.id/services' },
+      ]} />
       <Navigation forceDark />
       <main className={styles.main}>
 
