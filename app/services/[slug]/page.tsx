@@ -8,6 +8,7 @@ import { serviceBySlugQuery } from '@/lib/queries'
 import type { SanityServiceFull, SanityCaseStudy } from '@/lib/types'
 import ServiceFAQ from './ServiceFAQ'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import CTASection from '@/components/home/CTASection'
 import styles from './page.module.css'
 
@@ -119,10 +120,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       },
       openGraph: {
+        ...baseOpenGraph,
         title: `${service.title} — Elevent`,
         description,
         url: `https://elevent.id/services/${slug}`,
-        images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+        images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: `${service.title} — Elevent Corporate Event Services` }],
       },
     }
   } catch {

@@ -4,6 +4,7 @@ import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import { client } from '@/sanity/client'
 import { insightsQuery } from '@/lib/queries'
 import type { Insight } from '@/lib/types'
@@ -22,10 +23,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    ...baseOpenGraph,
     title: 'Insights — Elevent',
     description: 'Guides and perspectives on corporate events for enterprise teams in Indonesia.',
     url: 'https://elevent.id/insights',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Elevent Insights — Corporate Event Guides and Analysis' }],
   },
 }
 

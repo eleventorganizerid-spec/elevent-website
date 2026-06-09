@@ -4,6 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import WhatsAppButton from '@/components/ui/WhatsAppButton'
 import CookieBanner from '@/components/ui/CookieBanner'
 import JsonLd from '@/components/seo/JsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import './globals.css'
 
 const instrumentSerif = Instrument_Serif({
@@ -45,15 +46,11 @@ export const metadata: Metadata = {
     'MICE jakarta',
   ],
   openGraph: {
+    ...baseOpenGraph,
     title: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
     description:
       'Platform event organizer enterprise Indonesia. Dari gala dinner hingga hybrid conference, 100–5.000 peserta. Jakarta, Bali, Surabaya.',
-    type: 'website',
-    locale: 'id_ID',
-    alternateLocale: 'en_US',
     url: 'https://elevent.id',
-    siteName: 'Elevent',
-    images: [{ url: '/assets/og-image.jpg' }],
   },
   twitter: {
     card: 'summary_large_image',

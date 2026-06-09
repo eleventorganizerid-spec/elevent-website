@@ -5,6 +5,7 @@ import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import { client } from '@/sanity/client'
 import { allCaseStudiesQuery } from '@/lib/queries'
 import type { SanityCaseStudy } from '@/lib/types'
@@ -23,10 +24,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    ...baseOpenGraph,
     title: 'Our Work — Elevent',
     description: 'Case studies from enterprise events across Indonesia.',
     url: 'https://elevent.id/work',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Elevent Work — Enterprise Event Case Studies in Indonesia' }],
   },
 }
 

@@ -8,6 +8,7 @@ import { articleBySlugQuery, relatedInsightsQuery, insightsQuery } from '@/lib/q
 import type { Insight } from '@/lib/types'
 import CTASection from '@/components/home/CTASection'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import styles from './article.module.css'
 
 interface Props {
@@ -73,10 +74,15 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
         },
       },
       openGraph: {
+        ...baseOpenGraph,
+        type: 'article',
         title: `${displayTitle} — Elevent`,
         description: displayExcerpt,
         url: `https://elevent.id/insights/${slug}`,
-        images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+        publishedTime: article.publishedAt,
+        modifiedTime: article._updatedAt ?? article.publishedAt,
+        authors: ['Elevent'],
+        images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: `${displayTitle} — Elevent Insights` }],
       },
     }
   } catch {

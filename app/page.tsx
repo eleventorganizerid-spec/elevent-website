@@ -15,11 +15,13 @@ import { client } from '@/sanity/client'
 import { latestInsightsQuery } from '@/lib/queries'
 import type { Insight } from '@/lib/types'
 import { faqItems } from '@/lib/data'
+import { baseOpenGraph } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
   description: 'Platform event organizer enterprise Indonesia. Gala dinner, conference, team building, roadshow, incentive trip. Jakarta, Bali, Surabaya. 100–5.000 peserta.',
   openGraph: {
+    ...baseOpenGraph,
     title: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
     description: 'Platform event organizer enterprise Indonesia. Gala dinner, conference, team building, roadshow, incentive trip. Jakarta, Bali, Surabaya.',
     url: 'https://elevent.id',

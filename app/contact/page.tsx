@@ -3,6 +3,7 @@ import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import CTASection from '@/components/home/CTASection'
 import styles from './contact.module.css'
 
@@ -18,10 +19,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    ...baseOpenGraph,
     title: 'Contact — Elevent',
     description: 'Submit a brief or get in touch with Elevent. We respond within one working day.',
     url: 'https://elevent.id/contact',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Contact Elevent — Corporate Event Organizer Jakarta' }],
   },
 }
 

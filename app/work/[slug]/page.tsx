@@ -8,6 +8,7 @@ import { caseStudyBySlugQuery, relatedCaseStudiesQuery } from '@/lib/queries'
 import type { SanityCaseStudy } from '@/lib/types'
 import CTASection from '@/components/home/CTASection'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import styles from './page.module.css'
 
 interface Props {
@@ -44,10 +45,11 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       },
     },
     openGraph: {
+      ...baseOpenGraph,
       title: `${cs.title} — Elevent`,
       description,
       url: `https://elevent.id/work/${slug}`,
-      images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+      images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: `${cs.title} — Elevent Case Study` }],
     },
   }
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ProposalForm from './ProposalForm'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
@@ -16,10 +17,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    ...baseOpenGraph,
     title: 'Get a Proposal — Elevent',
     description: 'Submit your event brief to Elevent. We respond within one working day.',
     url: 'https://elevent.id/get-a-proposal',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Get a Proposal from Elevent — Corporate Event Organizer' }],
   },
 }
 

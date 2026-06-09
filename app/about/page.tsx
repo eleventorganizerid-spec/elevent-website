@@ -4,6 +4,7 @@ import Navigation from '@/components/layout/Navigation'
 import AnimateIn from '@/components/ui/AnimateIn'
 import Footer from '@/components/layout/Footer'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
+import { baseOpenGraph } from '@/lib/seo'
 import CTASection from '@/components/home/CTASection'
 import styles from './about.module.css'
 
@@ -19,10 +20,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    ...baseOpenGraph,
     title: 'About — Elevent',
     description: 'Elevent is a strategic event partner for enterprise companies in Indonesia.',
     url: 'https://elevent.id/about',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'About Elevent — Strategic Corporate Event Partner in Indonesia' }],
   },
 }
 
