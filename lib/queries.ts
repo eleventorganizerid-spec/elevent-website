@@ -145,6 +145,7 @@ export const insightsQuery = `
 export const articleBySlugQuery = `
   *[_type == "insight" && slug.current == $slug][0] {
     _id,
+    _updatedAt,
     title,
     titleId,
     slug,

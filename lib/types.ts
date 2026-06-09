@@ -105,6 +105,7 @@ export interface SanityInsight {
 
 export interface Insight {
   _id: string
+  _updatedAt?: string
   title: string
   titleId?: string
   slug: { current: string }

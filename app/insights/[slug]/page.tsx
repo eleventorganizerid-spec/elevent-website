@@ -143,8 +143,51 @@ export default async function ArticlePage({ params, searchParams }: Props) {
   const readTime = estimateReadTime(displayBody ?? [])
   const langParam = isEn ? '?lang=en' : ''
 
+  const canonicalUrl = `https://elevent.id/insights/${slug}`
+  const articleImage = article.coverImage?.asset?.url ?? 'https://elevent.id/assets/og-image.jpg'
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: displayTitle,
+    description: displayExcerpt,
+    image: [articleImage],
+    datePublished: article.publishedAt,
+    dateModified: article._updatedAt ?? article.publishedAt,
+    author: {
+      '@type': 'Organization',
+      name: 'Elevent',
+      url: 'https://elevent.id',
+      sameAs: [
+        'https://linkedin.com/company/elevent-id',
+        'https://youtube.com/@elevent',
+      ],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Elevent',
+      url: 'https://elevent.id',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://elevent.id/assets/logo-dark.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '#article-summary'],
+    },
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navigation forceDark={true} />
       <main className={styles.main}>
 
@@ -169,7 +212,7 @@ export default async function ArticlePage({ params, searchParams }: Props) {
           </h1>
 
           {displayExcerpt && (
-            <p className={styles.excerpt}>{displayExcerpt}</p>
+            <p id="article-summary" className={styles.excerpt}>{displayExcerpt}</p>
           )}
 
           <div className={styles.byline}>
