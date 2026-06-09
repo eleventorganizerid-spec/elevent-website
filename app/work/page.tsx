@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   description: 'Case studies from enterprise events across Indonesia. See how Elevent has directed outcomes for corporate clients in Jakarta, Bali, and Surabaya.',
   alternates: {
     canonical: 'https://elevent.id/work',
+    languages: {
+      'x-default': 'https://elevent.id/work',
+      'id': 'https://elevent.id/work',
+      'en': 'https://elevent.id/work?lang=en',
+    },
   },
   openGraph: {
     title: 'Our Work — Elevent',

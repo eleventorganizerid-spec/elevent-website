@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: 'Elevent is a strategic event partner for enterprise companies in Indonesia. A curated platform model matching every brief with the right specialist team.',
   alternates: {
     canonical: 'https://elevent.id/about',
+    languages: {
+      'x-default': 'https://elevent.id/about',
+      'id': 'https://elevent.id/about',
+      'en': 'https://elevent.id/about?lang=en',
+    },
   },
   openGraph: {
     title: 'About — Elevent',

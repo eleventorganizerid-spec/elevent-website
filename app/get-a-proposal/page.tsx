@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description: 'Submit your event brief to Elevent. Tell us about your company, event format, audience size, and timeline. We will respond within one working day.',
   alternates: {
     canonical: 'https://elevent.id/get-a-proposal',
+    languages: {
+      'x-default': 'https://elevent.id/get-a-proposal',
+      'id': 'https://elevent.id/get-a-proposal',
+      'en': 'https://elevent.id/get-a-proposal?lang=en',
+    },
   },
   openGraph: {
     title: 'Get a Proposal — Elevent',

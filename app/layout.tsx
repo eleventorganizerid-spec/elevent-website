@@ -64,8 +64,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://elevent.id',
     languages: {
-      id: 'https://elevent.id',
-      en: 'https://elevent.id/?lang=en',
+      'x-default': 'https://elevent.id',
+      'id': 'https://elevent.id',
+      'en': 'https://elevent.id/?lang=en',
     },
   },
 }

@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   description: 'Nine corporate event formats for enterprise companies in Indonesia. Gala dinners, conferences, team building, roadshows, incentive trips. One standard across all.',
   alternates: {
     canonical: 'https://elevent.id/services',
+    languages: {
+      'x-default': 'https://elevent.id/services',
+      'id': 'https://elevent.id/services',
+      'en': 'https://elevent.id/services?lang=en',
+    },
   },
   openGraph: {
     title: 'Services — Elevent',

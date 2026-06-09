@@ -6,7 +6,6 @@ const BASE = 'https://elevent.id'
 function urls(path: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']): MetadataRoute.Sitemap {
   return [
     { url: `${BASE}${path}`, priority, changeFrequency, lastModified: new Date() },
-    { url: `${BASE}${path}?lang=en`, priority, changeFrequency, lastModified: new Date() },
   ]
 }
 

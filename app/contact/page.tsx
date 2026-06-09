@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description: 'Get in touch with Elevent. Submit a brief, visit our Jakarta office, or reach us via WhatsApp. We respond within one working day.',
   alternates: {
     canonical: 'https://elevent.id/contact',
+    languages: {
+      'x-default': 'https://elevent.id/contact',
+      'id': 'https://elevent.id/contact',
+      'en': 'https://elevent.id/contact?lang=en',
+    },
   },
   openGraph: {
     title: 'Contact — Elevent',

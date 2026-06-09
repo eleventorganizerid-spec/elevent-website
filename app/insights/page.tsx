@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description: 'Guides, analysis, and perspectives on corporate events for GA Managers, CorpComm teams, and anyone responsible for their company event calendar.',
   alternates: {
     canonical: 'https://elevent.id/insights',
+    languages: {
+      'x-default': 'https://elevent.id/insights',
+      'id': 'https://elevent.id/insights',
+      'en': 'https://elevent.id/insights?lang=en',
+    },
   },
   openGraph: {
     title: 'Insights — Elevent',

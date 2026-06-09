@@ -65,6 +65,11 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       description: displayExcerpt,
       alternates: {
         canonical: `https://elevent.id/insights/${slug}`,
+        languages: {
+          'x-default': `https://elevent.id/insights/${slug}`,
+          'id': `https://elevent.id/insights/${slug}`,
+          'en': `https://elevent.id/insights/${slug}?lang=en`,
+        },
       },
       openGraph: {
         title: `${displayTitle} — Elevent`,
