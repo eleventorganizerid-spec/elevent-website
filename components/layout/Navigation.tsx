@@ -16,9 +16,10 @@ const navLinks = [
 
 interface NavigationProps {
   forceDark?: boolean
+  hasHero?: boolean
 }
 
-export default function Navigation({ forceDark = false }: NavigationProps) {
+export default function Navigation({ forceDark = false, hasHero = true }: NavigationProps) {
   const [scrolled, setScrolled]       = useState(false)
   const [isMenuOpen, setIsMenuOpen]   = useState(false)
   const searchParams = useSearchParams()
@@ -55,7 +56,7 @@ export default function Navigation({ forceDark = false }: NavigationProps) {
 
           <Link href={`/${langParam}`} className={styles.logo} onClick={closeMenu}>
             <Image
-              src={scrolled ? '/assets/logo-dark.png' : '/assets/logo-light.png'}
+              src={hasHero && !scrolled ? '/assets/logo-light.png' : '/assets/logo-dark.png'}
               alt="Elevent"
               width={120}
               height={60}

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import ProposalForm from './ProposalForm'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
@@ -35,7 +36,14 @@ export default function GetAProposalPage() {
       {/* Minimal header — logo only */}
       <header className={styles.header}>
         <Link href="/" className={styles.logo}>
-          ELE<span className={styles.logoV}>V</span>ENT
+          <Image
+            src="/assets/logo-dark.png"
+            alt="Elevent"
+            width={120}
+            height={60}
+            style={{ objectFit: 'contain', marginLeft: '-12px' }}
+            priority
+          />
         </Link>
       </header>
 

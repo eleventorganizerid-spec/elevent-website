@@ -11,7 +11,7 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <Suspense>
-      <Navigation />
+      <Navigation hasHero={false} />
       <main className={styles.main}>
         <div className={styles.inner}>
           <p className={styles.label}>LEGAL</p>

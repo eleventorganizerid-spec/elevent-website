@@ -67,7 +67,7 @@ export default async function InsightsPage({ searchParams }: Props) {
         { name: 'Home', url: 'https://elevent.id' },
         { name: 'Insights', url: 'https://elevent.id/insights' },
       ]} />
-      <Navigation />
+      <Navigation hasHero={false} />
       <main className={styles.main}>
 
         {/* ── 1. HEADER ─────────────────────────────────────────────── */}

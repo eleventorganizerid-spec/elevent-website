@@ -53,7 +53,7 @@ export default async function WorkPage({ searchParams }: { searchParams: Promise
         { name: 'Home', url: 'https://elevent.id' },
         { name: 'Our Work', url: 'https://elevent.id/work' },
       ]} />
-      <Navigation />
+      <Navigation hasHero={false} />
       <main className={styles.main}>
 
         {/* ── Header ─────────────────────────────────────────── */}
