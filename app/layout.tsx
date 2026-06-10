@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   title: {
-    default: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
+    default: 'Corporate Event Organizer Jakarta & Indonesia | Elevent',
     template: '%s | Elevent',
   },
   description:
