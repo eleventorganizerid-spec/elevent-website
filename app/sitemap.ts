@@ -19,6 +19,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...urls('/about', 0.8, 'monthly'),
     ...urls('/contact', 0.8, 'monthly'),
     ...urls('/get-a-proposal', 0.8, 'monthly'),
+    ...urls('/services/corporate-event-jakarta', 0.8, 'monthly'),
+    ...urls('/services/corporate-event-bali', 0.8, 'monthly'),
+    ...urls('/services/corporate-event-surabaya', 0.8, 'monthly'),
   ]
 
   // Dynamic routes from Sanity
