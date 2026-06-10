@@ -1,0 +1,164 @@
+.main {
+  background: var(--chalk);
+  color: var(--ink);
+}
+
+/* ── Hero ─────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  background: var(--ink);
+  color: var(--chalk);
+  padding: calc(var(--section-pad-y) * 1.6) var(--page-pad) var(--section-pad-y);
+  min-height: 68vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.heroContent {
+  max-width: 900px;
+}
+
+.heroLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: var(--sienna);
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-family: var(--font-instrument-serif), serif;
+  font-weight: 400;
+  font-size: clamp(40px, 7vw, 88px);
+  line-height: 1.05;
+  margin: 0 0 28px;
+}
+
+.heroSub {
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.6;
+  max-width: 640px;
+  color: rgba(247, 244, 239, 0.82);
+}
+
+/* ── Generic section ──────────────────────────────────── */
+.section {
+  padding: var(--section-pad-y) var(--page-pad);
+}
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-family: var(--font-instrument-serif), serif;
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.1;
+  margin: 0 0 28px;
+}
+
+.body {
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.7;
+  max-width: 720px;
+  color: var(--ink);
+}
+
+/* ── Dark variant (Our Services) ──────────────────────── */
+.sectionDark {
+  background: var(--ink);
+  color: var(--chalk);
+}
+
+.sectionDark .sectionLabel {
+  color: rgba(247, 244, 239, 0.6);
+}
+
+.sectionDark .body {
+  color: rgba(247, 244, 239, 0.82);
+}
+
+/* ── Services list ────────────────────────────────────── */
+.servicesIntro {
+  margin-bottom: 32px;
+}
+
+.servicesList {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--rule-dark);
+}
+
+.serviceLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule-dark);
+  color: var(--chalk);
+  text-decoration: none;
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(20px, 2.4vw, 30px);
+  transition: padding-left 0.25s ease, color 0.25s ease;
+}
+
+.serviceLink:hover {
+  padding-left: 12px;
+  color: var(--sienna);
+}
+
+.serviceArrow {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+/* ── Venue references ─────────────────────────────────── */
+.venueList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.venueItem {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  padding: 10px 16px;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+
+.venueDisclaimer {
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 640px;
+  color: var(--stone);
+}
+
+/* ── Mobile ───────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .hero {
+    min-height: 56vh;
+  }
+
+  .serviceLink {
+    font-size: 22px;
+  }
+}

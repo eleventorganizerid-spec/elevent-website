@@ -15,6 +15,12 @@ const footerServices = [
 
 const footerCities = ['Jakarta', 'Bali', 'Surabaya', 'Bandung', 'Medan', 'Makassar']
 
+const footerCityServices = [
+  { label: 'Corporate Event Jakarta',  slug: 'corporate-event-jakarta'  },
+  { label: 'Corporate Event Bali',     slug: 'corporate-event-bali'     },
+  { label: 'Corporate Event Surabaya', slug: 'corporate-event-surabaya' },
+]
+
 const footerElsewhere = [
   { label: 'LinkedIn',  href: 'https://linkedin.com/company/elevent-id' },
   { label: 'YouTube',   href: 'https://youtube.com/@elevent'            },
@@ -77,6 +83,19 @@ export default function Footer() {
               {footerCities.map((c) => (
                 <li key={c}>
                   <span className={styles.colText}>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className={styles.col}>
+            <p className={styles.colLabel}>Services by City</p>
+            <ul className={styles.colList}>
+              {footerCityServices.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/services/${c.slug}`} className={styles.colLink}>
+                    {c.label}
+                  </Link>
                 </li>
               ))}
             </ul>
