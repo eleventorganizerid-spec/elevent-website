@@ -124,7 +124,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: `${service.title} — Elevent`,
         description,
         url: `https://elevent.id/services/${slug}`,
-        images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: `${service.title} — Elevent Corporate Event Services` }],
+        images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: `${service.title} — Elevent Corporate Event Services` }],
       },
     }
   } catch {

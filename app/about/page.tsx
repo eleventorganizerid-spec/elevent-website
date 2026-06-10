@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: 'About — Elevent',
     description: 'Elevent is a strategic event partner for enterprise companies in Indonesia.',
     url: 'https://elevent.id/about',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'About Elevent — Strategic Corporate Event Partner in Indonesia' }],
+    images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: 'About Elevent — Strategic Corporate Event Partner in Indonesia' }],
   },
 }
 

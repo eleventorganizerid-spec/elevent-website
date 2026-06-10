@@ -82,7 +82,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
         publishedTime: article.publishedAt,
         modifiedTime: article._updatedAt ?? article.publishedAt,
         authors: ['Elevent'],
-        images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: `${displayTitle} — Elevent Insights` }],
+        images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: `${displayTitle} — Elevent Insights` }],
       },
     }
   } catch {
@@ -151,7 +151,7 @@ export default async function ArticlePage({ params, searchParams }: Props) {
   const langParam = isEn ? '?lang=en' : ''
 
   const canonicalUrl = `https://elevent.id/insights/${slug}`
-  const articleImage = article.coverImage?.asset?.url ?? 'https://elevent.id/assets/og-image.jpg'
+  const articleImage = article.coverImage?.asset?.url ?? 'https://elevent.id/assets/og-image.png'
 
   const articleSchema = {
     '@context': 'https://schema.org',

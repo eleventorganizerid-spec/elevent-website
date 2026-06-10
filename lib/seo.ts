@@ -7,7 +7,7 @@ export const baseOpenGraph = {
   siteName: 'Elevent',
   images: [
     {
-      url: '/assets/og-image.jpg',
+      url: '/assets/og-image.png',
       width: 1200,
       height: 630,
       alt: 'Elevent — Corporate Event Organizer Jakarta',

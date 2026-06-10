@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Contact — Elevent',
     description: 'Submit a brief or get in touch with Elevent. We respond within one working day.',
     url: 'https://elevent.id/contact',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Contact Elevent — Corporate Event Organizer Jakarta' }],
+    images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: 'Contact Elevent — Corporate Event Organizer Jakarta' }],
   },
 }
 

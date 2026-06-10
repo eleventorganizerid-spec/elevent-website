@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Insights — Elevent',
     description: 'Guides and perspectives on corporate events for enterprise teams in Indonesia.',
     url: 'https://elevent.id/insights',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Elevent Insights — Corporate Event Guides and Analysis' }],
+    images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: 'Elevent Insights — Corporate Event Guides and Analysis' }],
   },
 }
 

@@ -29,7 +29,7 @@ const schema = {
       name: 'Elevent',
       '@id': 'https://elevent.id',
       url: 'https://elevent.id',
-      image: 'https://elevent.id/assets/og-image.jpg',
+      image: 'https://elevent.id/assets/og-image.png',
       telephone: '+62-851-9933-3039',
       email: 'brief@elevent.id',
       priceRange: 'Rp100.000.000 - Rp5.000.000.000',

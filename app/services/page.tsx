@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Services — Elevent',
     description: 'Nine corporate event formats for enterprise companies in Indonesia.',
     url: 'https://elevent.id/services',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Elevent Services — Corporate Event Formats for Enterprise Companies' }],
+    images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: 'Elevent Services — Corporate Event Formats for Enterprise Companies' }],
   },
 }
 

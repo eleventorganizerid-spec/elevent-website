@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Our Work — Elevent',
     description: 'Case studies from enterprise events across Indonesia.',
     url: 'https://elevent.id/work',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Elevent Work — Enterprise Event Case Studies in Indonesia' }],
+    images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: 'Elevent Work — Enterprise Event Case Studies in Indonesia' }],
   },
 }
 

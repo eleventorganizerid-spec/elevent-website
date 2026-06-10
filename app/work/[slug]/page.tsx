@@ -49,7 +49,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       title: `${cs.title} — Elevent`,
       description,
       url: `https://elevent.id/work/${slug}`,
-      images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: `${cs.title} — Elevent Case Study` }],
+      images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: `${cs.title} — Elevent Case Study` }],
     },
   }
 }

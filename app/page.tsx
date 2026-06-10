@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
     description: 'Platform event organizer enterprise Indonesia. Gala dinner, conference, team building, roadshow, incentive trip. Jakarta, Bali, Surabaya.',
     url: 'https://elevent.id',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Elevent — Corporate Event Organizer Jakarta' }],
+    images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: 'Elevent — Corporate Event Organizer Jakarta' }],
   },
 }
 

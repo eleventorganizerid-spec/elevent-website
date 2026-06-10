@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Get a Proposal — Elevent',
     description: 'Submit your event brief to Elevent. We respond within one working day.',
     url: 'https://elevent.id/get-a-proposal',
-    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630, alt: 'Get a Proposal from Elevent — Corporate Event Organizer' }],
+    images: [{ url: '/assets/og-image.png', width: 1200, height: 630, alt: 'Get a Proposal from Elevent — Corporate Event Organizer' }],
   },
 }
 
