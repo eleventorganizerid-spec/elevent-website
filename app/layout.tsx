@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   title: {
     default: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
     template: '%s | Elevent',

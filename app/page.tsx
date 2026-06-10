@@ -18,7 +18,7 @@ import { faqItems } from '@/lib/data'
 import { baseOpenGraph } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Elevent — Corporate Event Organizer Jakarta | Enterprise Events Indonesia',
+  title: { absolute: 'Corporate Event Organizer Jakarta & Indonesia | Elevent' },
   description: 'Platform event organizer enterprise Indonesia. Gala dinner, conference, team building, roadshow, incentive trip. Jakarta, Bali, Surabaya. 100–5.000 peserta.',
   openGraph: {
     ...baseOpenGraph,
