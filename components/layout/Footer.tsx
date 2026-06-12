@@ -16,9 +16,9 @@ const footerServices = [
 const footerCities = ['Jakarta', 'Bali', 'Surabaya', 'Bandung', 'Medan', 'Makassar']
 
 const footerCityServices = [
-  { label: 'Corporate Event Jakarta',  slug: 'corporate-event-jakarta'  },
-  { label: 'Corporate Event Bali',     slug: 'corporate-event-bali'     },
-  { label: 'Corporate Event Surabaya', slug: 'corporate-event-surabaya' },
+  { label: 'Jakarta Events',  slug: 'corporate-event-jakarta'  },
+  { label: 'Bali Events',     slug: 'corporate-event-bali'     },
+  { label: 'Surabaya Events', slug: 'corporate-event-surabaya' },
 ]
 
 const footerElsewhere = [
