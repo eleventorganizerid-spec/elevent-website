@@ -34,8 +34,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(5, minmax(0, 1fr));
-  gap: 40px;
+  grid-template-columns: 2fr repeat(5, minmax(0, 1fr));
+  gap: 24px;
   padding-bottom: clamp(48px, 6vw, 80px);
   border-bottom: 1px solid var(--rule-dark);
 }
