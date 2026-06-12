@@ -64,7 +64,7 @@ export default function CityLanding({ city, lang }: { city: CityKey; lang?: stri
             <AnimateIn delay={0.1}>
               <h1 className={styles.heroTitle}>{data.hero.headlineEn}</h1>
             </AnimateIn>
-            <AnimateIn delay={0.2} className={styles.heroSub}>{data.hero.subId}</AnimateIn>
+            <AnimateIn delay={0.2} className={styles.heroSub}>{isEn ? data.hero.subEn : data.hero.subId}</AnimateIn>
           </div>
         </section>
 
@@ -73,7 +73,7 @@ export default function CityLanding({ city, lang }: { city: CityKey; lang?: stri
           <div className={styles.inner}>
             <p className={styles.sectionLabel}>WHY {data.cityName.toUpperCase()}</p>
             <h2 className={styles.heading}>{data.why.headingEn}</h2>
-            <p className={styles.body}>{data.why.bodyId}</p>
+            <p className={styles.body}>{isEn ? data.why.bodyEn : data.why.bodyId}</p>
           </div>
         </section>
 
@@ -82,7 +82,7 @@ export default function CityLanding({ city, lang }: { city: CityKey; lang?: stri
           <div className={styles.inner}>
             <p className={styles.sectionLabel}>OUR SERVICES</p>
             <h2 className={styles.heading}>{data.services.headingEn}</h2>
-            <p className={`${styles.body} ${styles.servicesIntro}`}>{data.services.introId}</p>
+            <p className={`${styles.body} ${styles.servicesIntro}`}>{isEn ? data.services.introEn : data.services.introId}</p>
             <div className={styles.servicesList}>
               {data.services.items.map((item) => (
                 <Link
@@ -103,13 +103,13 @@ export default function CityLanding({ city, lang }: { city: CityKey; lang?: stri
           <div className={styles.inner}>
             <p className={styles.sectionLabel}>VENUE REFERENCES</p>
             <h2 className={styles.heading}>{data.venues.headingEn}</h2>
-            <p className={`${styles.body} ${styles.servicesIntro}`}>{data.venues.introId}</p>
+            <p className={`${styles.body} ${styles.servicesIntro}`}>{isEn ? data.venues.introEn : data.venues.introId}</p>
             <ul className={styles.venueList}>
               {data.venues.list.map((v) => (
                 <li key={v} className={styles.venueItem}>{v}</li>
               ))}
             </ul>
-            <p className={styles.venueDisclaimer}>{data.venues.disclaimerId}</p>
+            <p className={styles.venueDisclaimer}>{isEn ? data.venues.disclaimerEn : data.venues.disclaimerId}</p>
           </div>
         </section>
 
