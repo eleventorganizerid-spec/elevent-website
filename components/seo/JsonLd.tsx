@@ -2,6 +2,19 @@ const schema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'WebSite',
+      name: 'Elevent',
+      url: 'https://elevent.id',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://www.google.com/search?q={search_term_string}+site:elevent.id',
+        },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
       '@type': 'Organization',
       name: 'Elevent',
       url: 'https://elevent.id',
