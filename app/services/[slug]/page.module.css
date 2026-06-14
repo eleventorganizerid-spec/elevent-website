@@ -410,3 +410,40 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Related insights + city cross-links ──────────────── */
+.crossLinkList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.crossLink {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(18px, 2vw, 26px);
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.crossLink:hover {
+  color: var(--sienna);
+}
+
+.cityLine {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--stone);
+}
+
+.crossLinkAccent {
+  color: var(--sienna);
+  text-decoration: none;
+}
+
+.crossLinkAccent:hover {
+  text-decoration: underline;
+}

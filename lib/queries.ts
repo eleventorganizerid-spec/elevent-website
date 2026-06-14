@@ -166,7 +166,7 @@ export const articleBySlugQuery = `
 
 export const relatedInsightsQuery = `
   *[_type == "insight" && slug.current != $slug]
-  | order(publishedAt desc) [0...3] {
+  | order(select(category == $category => 0, 1) asc, publishedAt desc) [0...3] {
     _id,
     title,
     titleId,
@@ -180,6 +180,15 @@ export const relatedInsightsQuery = `
         url
       }
     }
+  }
+`
+
+export const insightsByCategoryQuery = `
+  *[_type == "insight" && category == $category] | order(publishedAt desc) [0...3] {
+    _id,
+    title,
+    titleId,
+    slug
   }
 `
 

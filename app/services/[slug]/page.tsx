@@ -4,12 +4,15 @@ import { notFound } from 'next/navigation'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import { client } from '@/sanity/client'
-import { serviceBySlugQuery } from '@/lib/queries'
+import { serviceBySlugQuery, insightsByCategoryQuery } from '@/lib/queries'
 import type { SanityServiceFull, SanityCaseStudy } from '@/lib/types'
 import ServiceFAQ from './ServiceFAQ'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import { baseOpenGraph } from '@/lib/seo'
 import CTASection from '@/components/home/CTASection'
+import { serviceToCategory, serviceToCities } from '@/lib/related'
+
+type RelatedInsightLink = { _id: string; title?: string; titleId?: string; slug: { current: string } }
 import styles from './page.module.css'
 
 interface Props {
@@ -136,14 +139,22 @@ export default async function ServiceDetailPage({ params, searchParams }: Props)
   const { slug } = await params
   const { lang } = await searchParams
   const isEn = lang === 'en'
+  const langParam = isEn ? '?lang=en' : ''
 
   let service: SanityServiceFull | null = null
   let related: SanityCaseStudy[] = []
+  let relatedInsights: RelatedInsightLink[] = []
+
+  const insightCategory = serviceToCategory[slug] ?? null
+  const cityLinks = serviceToCities[slug] ?? []
 
   try {
-    ;[service, related] = await Promise.all([
+    ;[service, related, relatedInsights] = await Promise.all([
       client.fetch<SanityServiceFull | null>(serviceBySlugQuery, { slug }),
       client.fetch<SanityCaseStudy[]>(relatedCaseStudiesForService),
+      insightCategory
+        ? client.fetch<RelatedInsightLink[]>(insightsByCategoryQuery, { category: insightCategory })
+        : Promise.resolve([] as RelatedInsightLink[]),
     ])
   } catch {
     // Sanity unavailable
@@ -328,6 +339,41 @@ export default async function ServiceDetailPage({ params, searchParams }: Props)
             <div className={styles.inner}>
               <p className={styles.sectionLabel}>FAQ</p>
               <ServiceFAQ faqs={service.faqs} lang={lang} />
+            </div>
+          </section>
+        )}
+
+        {/* ── 7b. RELATED INSIGHTS + CITY LINKS ─────────────────────────── */}
+        {(relatedInsights.length > 0 || cityLinks.length > 0) && (
+          <section className={styles.relatedSection}>
+            <div className={styles.inner}>
+              {relatedInsights.length > 0 && (
+                <>
+                  <p className={styles.sectionLabel}>{isEn ? 'RELATED INSIGHTS' : 'INSIGHT TERKAIT'}</p>
+                  <ul className={styles.crossLinkList}>
+                    {relatedInsights.map((i) => (
+                      <li key={i._id}>
+                        <Link href={`/insights/${i.slug.current}${langParam}`} className={styles.crossLink}>
+                          {isEn ? (i.title ?? i.titleId) : (i.titleId ?? i.title)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {cityLinks.length > 0 && (
+                <p className={styles.cityLine}>
+                  {isEn ? 'Planning in a specific city? ' : 'Merencanakan di kota tertentu? '}
+                  {cityLinks.map((c, idx) => (
+                    <span key={c.slug}>
+                      <Link href={`/services/${c.slug}${langParam}`} className={styles.crossLinkAccent}>
+                        {isEn ? `Corporate events in ${c.label}` : `Corporate event di ${c.label}`}
+                      </Link>
+                      {idx < cityLinks.length - 1 ? ', ' : ''}
+                    </span>
+                  ))}
+                </p>
+              )}
             </div>
           </section>
         )}

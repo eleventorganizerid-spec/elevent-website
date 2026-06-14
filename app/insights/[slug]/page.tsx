@@ -9,6 +9,7 @@ import type { Insight } from '@/lib/types'
 import CTASection from '@/components/home/CTASection'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import { baseOpenGraph } from '@/lib/seo'
+import { categoryToServices } from '@/lib/related'
 import styles from './article.module.css'
 
 interface Props {
@@ -132,10 +133,11 @@ export default async function ArticlePage({ params, searchParams }: Props) {
   let related: Insight[] = []
 
   try {
-    ;[article, related] = await Promise.all([
-      client.fetch<Insight | null>(articleBySlugQuery, { slug }),
-      client.fetch<Insight[]>(relatedInsightsQuery, { slug }),
-    ])
+    article = await client.fetch<Insight | null>(articleBySlugQuery, { slug })
+    related = await client.fetch<Insight[]>(relatedInsightsQuery, {
+      slug,
+      category: article?.category ?? null,
+    })
   } catch {
     // Sanity unavailable
   }
@@ -149,6 +151,7 @@ export default async function ArticlePage({ params, searchParams }: Props) {
 
   const readTime = estimateReadTime(displayBody ?? [])
   const langParam = isEn ? '?lang=en' : ''
+  const relatedServices = article.category ? (categoryToServices[article.category] ?? []) : []
 
   const canonicalUrl = `https://elevent.id/insights/${slug}`
   const articleImage = article.coverImage?.asset?.url ?? 'https://elevent.id/assets/og-image.png'
@@ -328,6 +331,27 @@ export default async function ArticlePage({ params, searchParams }: Props) {
                 </Link>
               ))}
             </div>
+          </section>
+        )}
+
+        {/* ── 5b. RELATED SERVICES ──────────────────────────────────── */}
+        {relatedServices.length > 0 && (
+          <section className={styles.relatedSection}>
+            <div className={styles.relatedHeader}>
+              <span className={styles.relatedLabel}>{isEn ? 'RELATED SERVICES' : 'LAYANAN TERKAIT'}</span>
+              <Link href={`/services${langParam}`} className={styles.relatedAll}>
+                {isEn ? 'All services →' : 'Semua layanan →'}
+              </Link>
+            </div>
+            <ul className={styles.serviceLinkList}>
+              {relatedServices.map((s) => (
+                <li key={s.slug}>
+                  <Link href={`/services/${s.slug}${langParam}`} className={styles.serviceLinkItem}>
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </section>
         )}
 
