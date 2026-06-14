@@ -29,6 +29,16 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        // Public page routes only: exclude /api/, Next.js internals, and any file with an extension
+        source: '/((?!api/|_next/|.*\\..*).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=3600, stale-while-revalidate=86400',
+          },
+        ],
+      },
     ];
   },
 };
