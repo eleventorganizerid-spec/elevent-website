@@ -89,7 +89,8 @@ const PLACEHOLDER_HERO = 'https://images.unsplash.com/photo-1511578314322-379afb
 const PLACEHOLDER_CARD = 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80'
 
 const relatedCaseStudiesForService = `
-  *[_type == "caseStudy"] | order(year desc)[0...2] {
+  *[_type == "caseStudy"]
+  | order(select(eventType->slug.current == $slug => 0, 1) asc, year desc)[0...2] {
     _id,
     title,
     slug,
@@ -151,7 +152,7 @@ export default async function ServiceDetailPage({ params, searchParams }: Props)
   try {
     ;[service, related, relatedInsights] = await Promise.all([
       client.fetch<SanityServiceFull | null>(serviceBySlugQuery, { slug }),
-      client.fetch<SanityCaseStudy[]>(relatedCaseStudiesForService),
+      client.fetch<SanityCaseStudy[]>(relatedCaseStudiesForService, { slug }),
       insightCategory
         ? client.fetch<RelatedInsightLink[]>(insightsByCategoryQuery, { category: insightCategory })
         : Promise.resolve([] as RelatedInsightLink[]),
