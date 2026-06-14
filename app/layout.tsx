@@ -39,6 +39,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   title: {
     default: 'Corporate Event Organizer Jakarta & Indonesia | Elevent',
@@ -75,6 +82,9 @@ export const metadata: Metadata = {
       'x-default': 'https://elevent.id',
       'id': 'https://elevent.id',
       'en': 'https://elevent.id/?lang=en',
+    },
+    types: {
+      'text/plain': [{ url: '/llms.txt', title: 'LLMs.txt' }],
     },
   },
 }

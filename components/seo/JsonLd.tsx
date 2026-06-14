@@ -5,6 +5,7 @@ const schema = {
       '@type': 'WebSite',
       name: 'Elevent',
       url: 'https://elevent.id',
+      inLanguage: ['id-ID', 'en-US'],
       potentialAction: {
         '@type': 'SearchAction',
         target: {
@@ -16,10 +17,22 @@ const schema = {
     },
     {
       '@type': 'Organization',
+      '@id': 'https://elevent.id/#organization',
       name: 'Elevent',
       url: 'https://elevent.id',
       description:
         'Platform event organizer enterprise Indonesia. Curated model — memasangkan setiap event dengan tim spesialis yang tepat.',
+      inLanguage: ['id-ID', 'en-US'],
+      knowsAbout: [
+        'Corporate Events',
+        'MICE',
+        'Gala Dinner',
+        'Team Building',
+        'Incentive Trip',
+        'Conference',
+        'Corporate Event Organizer',
+        'Indonesia',
+      ],
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'AD Premier Office Park, 17th Floor, Suite 04B, Jl. TB Simatupang No.5',
@@ -36,6 +49,28 @@ const schema = {
       },
       areaServed: ['Jakarta', 'Bali', 'Surabaya', 'Indonesia'],
       sameAs: ['https://wa.me/6285199333039'],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Corporate Event Services',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Event', url: 'https://elevent.id/services/corporate-event' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Gathering', url: 'https://elevent.id/services/corporate-gathering' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Product Launching', url: 'https://elevent.id/services/product-launching' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Gala Dinner & Award Night', url: 'https://elevent.id/services/gala-dinner-award-night' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Conference & Seminar', url: 'https://elevent.id/services/conference-seminar' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Team Building', url: 'https://elevent.id/services/team-building' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'MICE & Hospitality', url: 'https://elevent.id/services/mice-hospitality' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hybrid & Virtual Event', url: 'https://elevent.id/services/hybrid-virtual-event' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Incentive Trip', url: 'https://elevent.id/services/incentive-trip' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Meeting', url: 'https://elevent.id/services/corporate-meeting' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Anniversary', url: 'https://elevent.id/services/corporate-anniversary' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Outing', url: 'https://elevent.id/services/corporate-outing' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand Activation', url: 'https://elevent.id/services/brand-activation' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Exhibition & Pameran', url: 'https://elevent.id/services/exhibition-pameran' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Roadshow', url: 'https://elevent.id/services/roadshow' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Event Organizer', url: 'https://elevent.id/services/corporate-event-organizer' } },
+        ],
+      },
     },
     {
       '@type': 'LocalBusiness',
