@@ -63,10 +63,11 @@ export default async function CaseStudyPage({ params, searchParams }: Props) {
   let related: SanityCaseStudy[] = []
 
   try {
-    ;[caseStudy, related] = await Promise.all([
-      client.fetch<SanityCaseStudy | null>(caseStudyBySlugQuery, { slug }),
-      client.fetch<SanityCaseStudy[]>(relatedCaseStudiesQuery, { slug }),
-    ])
+    caseStudy = await client.fetch<SanityCaseStudy | null>(caseStudyBySlugQuery, { slug })
+    related = await client.fetch<SanityCaseStudy[]>(relatedCaseStudiesQuery, {
+      slug,
+      eventType: caseStudy?.eventType?.slug?.current ?? null,
+    })
   } catch {
     // Sanity unavailable
   }

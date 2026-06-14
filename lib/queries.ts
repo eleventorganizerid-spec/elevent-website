@@ -270,7 +270,8 @@ export const caseStudyBySlugQuery = `
 `
 
 export const relatedCaseStudiesQuery = `
-  *[_type == "caseStudy" && slug.current != $slug] | order(year desc)[0...2] {
+  *[_type == "caseStudy" && slug.current != $slug]
+  | order(select(eventType->slug.current == $eventType => 0, 1) asc, year desc)[0...2] {
     _id,
     title,
     titleId,
