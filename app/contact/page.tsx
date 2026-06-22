@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import { baseOpenGraph } from '@/lib/seo'
 import CTASection from '@/components/home/CTASection'
+import WhatsAppLink from '@/components/ui/WhatsAppLink'
 import styles from './contact.module.css'
 
 export const metadata: Metadata = {
@@ -85,14 +86,13 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
 
               <div className={styles.contactItem}>
                 <span className={styles.contactItemLabel}>WHATSAPP</span>
-                <a
+                <WhatsAppLink
                   href="https://wa.me/6285199333039"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  location="contact_page"
                   className={styles.contactValue}
                 >
                   +62 851 9933 3039
-                </a>
+                </WhatsAppLink>
               </div>
 
               <div className={styles.contactItem}>

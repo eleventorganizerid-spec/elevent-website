@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { sendGAEvent } from '@next/third-parties/google'
 import styles from './page.module.css'
 
 const eventTypes = [
@@ -177,6 +178,7 @@ export default function ProposalForm() {
     ].join('\n')
 
     const waUrl = `https://wa.me/6285199333039?text=${encodeURIComponent(message)}`
+    sendGAEvent('event', 'generate_lead', { method: 'proposal_form', page: '/get-a-proposal' })
     window.open(waUrl, '_blank')
     setSubmitted(true)
   }

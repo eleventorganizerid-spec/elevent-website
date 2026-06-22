@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
+import { sendGAEvent } from '@next/third-parties/google'
 import styles from './Footer.module.css'
 
 const footerServices = [
@@ -135,6 +136,11 @@ export default function Footer() {
                     className={styles.colLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={
+                      e.href.includes('wa.me')
+                        ? () => sendGAEvent('event', 'whatsapp_click', { location: 'footer' })
+                        : undefined
+                    }
                   >
                     {e.label}
                   </a>

@@ -1,3 +1,6 @@
+'use client'
+
+import { sendGAEvent } from '@next/third-parties/google'
 import styles from './WhatsAppButton.module.css'
 
 export default function WhatsAppButton() {
@@ -8,6 +11,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       className={styles.btn}
       aria-label="Chat on WhatsApp"
+      onClick={() => sendGAEvent('event', 'whatsapp_click', { location: 'floating_button' })}
     >
       <svg
         width="26"
