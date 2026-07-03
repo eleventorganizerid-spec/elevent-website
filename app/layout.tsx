@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Instrument_Serif, Hanken_Grotesk, JetBrains_Mono } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
 import WhatsAppButton from '@/components/ui/WhatsAppButton'
 import CookieBanner from '@/components/ui/CookieBanner'
 import JsonLd from '@/components/seo/JsonLd'
@@ -108,6 +109,13 @@ export default function RootLayout({
         <WhatsAppButton />
         <CookieBanner />
         <GoogleAnalytics gaId="G-ESWHLBLEN3" />
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`(function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "xgikm57ck9");`}
+        </Script>
       </body>
     </html>
   )
