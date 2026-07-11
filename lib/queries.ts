@@ -232,6 +232,7 @@ export const caseStudyBySlugQuery = `
     outcome,
     outcomeId,
     outcomeNumber,
+    youtubeId,
     heroImage {
       asset-> {
         _id,

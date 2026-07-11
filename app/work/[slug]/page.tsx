@@ -262,6 +262,26 @@ export default async function CaseStudyPage({ params, searchParams }: Props) {
           </section>
         )}
 
+        {/* ── 6b. VIDEO HIGHLIGHT (optional, per case study) ────────── */}
+        {caseStudy.youtubeId && (
+          <section className={styles.videoSection}>
+            <div className={styles.inner}>
+              <div className={styles.rule} />
+              <p className={styles.sectionLabel}>{isEn ? 'HIGHLIGHT' : 'HIGHLIGHT'}</p>
+              <div className={styles.videoWrap}>
+                <iframe
+                  className={styles.videoFrame}
+                  src={`https://www.youtube-nocookie.com/embed/${caseStudy.youtubeId}`}
+                  title={`${displayTitle} highlight`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* ── 7. CLIENT QUOTE ──────────────────────────────────────── */}
         {displayQuote && (
           <section className={styles.quoteSection}>

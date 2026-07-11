@@ -84,6 +84,7 @@ export interface SanityCaseStudy {
   clientQuoteName?: string
   clientQuoteAttribution?: string
   year?: number
+  youtubeId?: string
   featured?: boolean
   eventType?: {
     title: string

@@ -181,6 +181,13 @@ export default defineType({
       type: 'number',
     }),
     defineField({
+      name: 'youtubeId',
+      title: 'YouTube Video ID (highlight)',
+      type: 'string',
+      description:
+        'Optional. YouTube video ID for a highlight embed, e.g. n-hYW2aMC7k. Renders a responsive 16:9 video section on the case study page.',
+    }),
+    defineField({
       name: 'eventType',
       title: 'Event Type',
       type: 'reference',
