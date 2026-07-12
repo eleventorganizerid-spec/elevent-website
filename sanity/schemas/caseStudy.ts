@@ -188,6 +188,34 @@ export default defineType({
         'Optional. YouTube video ID for a highlight embed, e.g. n-hYW2aMC7k. Renders a responsive 16:9 video section on the case study page.',
     }),
     defineField({
+      name: 'videoTitle',
+      title: 'Video Title (VideoObject)',
+      type: 'string',
+      description:
+        'Optional. Title for the highlight video in the VideoObject schema. Falls back to the case study title + "Highlight" if empty.',
+    }),
+    defineField({
+      name: 'videoDescription',
+      title: 'Video Description (VideoObject)',
+      type: 'text',
+      description:
+        'Optional. 1 to 2 sentences describing what the highlight video shows. Used in the VideoObject schema.',
+    }),
+    defineField({
+      name: 'videoDuration',
+      title: 'Video Duration (VideoObject)',
+      type: 'string',
+      description:
+        'Optional. ISO 8601 duration, e.g. PT2M30S for 2 min 30 sec. Used in the VideoObject schema.',
+    }),
+    defineField({
+      name: 'videoUploadDate',
+      title: 'Video Upload Date (VideoObject)',
+      type: 'date',
+      description:
+        'Optional. Date the video was published on YouTube. Falls back to the case study year if empty.',
+    }),
+    defineField({
       name: 'eventType',
       title: 'Event Type',
       type: 'reference',

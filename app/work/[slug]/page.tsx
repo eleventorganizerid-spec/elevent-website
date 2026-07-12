@@ -92,6 +92,23 @@ export default async function CaseStudyPage({ params, searchParams }: Props) {
   const attrRole = attrParts[0]?.trim() ?? ''
   const attrCompany = attrParts.slice(1).join(',').trim()
 
+  // VideoObject structured data — built only when a video exists; empty fields are omitted
+  const videoUploadDate =
+    caseStudy.videoUploadDate ?? (caseStudy.year ? `${caseStudy.year}-01-01` : undefined)
+  const videoSchema: Record<string, unknown> | null = caseStudy.youtubeId
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: caseStudy.videoTitle || `${displayTitle} — Highlight`,
+        thumbnailUrl: `https://img.youtube.com/vi/${caseStudy.youtubeId}/maxresdefault.jpg`,
+        embedUrl: `https://www.youtube.com/embed/${caseStudy.youtubeId}`,
+        url: `https://www.youtube.com/watch?v=${caseStudy.youtubeId}`,
+        ...(caseStudy.videoDescription ? { description: caseStudy.videoDescription } : {}),
+        ...(videoUploadDate ? { uploadDate: videoUploadDate } : {}),
+        ...(caseStudy.videoDuration ? { duration: caseStudy.videoDuration } : {}),
+      }
+    : null
+
   return (
     <>
       <Navigation forceDark={true} />
@@ -278,6 +295,12 @@ export default async function CaseStudyPage({ params, searchParams }: Props) {
                   loading="lazy"
                 />
               </div>
+              {videoSchema && (
+                <script
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+                />
+              )}
             </div>
           </section>
         )}

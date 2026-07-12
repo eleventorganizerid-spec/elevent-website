@@ -6,6 +6,8 @@ export default defineCliConfig({
     dataset: 'production',
   },
   deployment: {
-    appId: 'jcrf1pupfvwvb8qf4cvuhjd7',
+    // elevent-studio.sanity.studio (the live Studio). The previous appId
+    // jcrf1pupfvwvb8qf4cvuhjd7 pointed to the unused elevent-id-studio host.
+    appId: 't6fmd8m24a1o4qxovxug4y6y',
   },
 })
