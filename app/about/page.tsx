@@ -114,8 +114,18 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
       <Navigation forceDark />
       <main className={styles.main}>
 
-        {/* ── 1. HERO — unchanged ───────────────────────────────── */}
+        {/* ── 1. HERO — full-bleed background photo + overlay ────── */}
         <section className={styles.hero}>
+          <Image
+            src="/assets/about-hero.jpg"
+            fill
+            alt=""
+            priority
+            sizes="100vw"
+            className={styles.heroImage}
+            style={{ objectFit: 'cover', filter: 'saturate(0.85)' }}
+          />
+          <div className={styles.heroOverlay} />
           <div className={styles.heroInner}>
             <AnimateIn delay={0} className={styles.heroLabel}>ABOUT ELEVENT</AnimateIn>
             <AnimateIn delay={0.1}>
@@ -248,12 +258,60 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
           </div>
         </section>
 
+        {/* ── 4. BEHIND THE WORK — crew media grid (dark) ────────── */}
+        <section className={styles.crewSection}>
+          <div className={styles.inner}>
+            <div className={styles.crewHeader}>
+              <p className={`${styles.sectionLabel} ${styles.sectionLabelLight}`}>
+                04 — THE TEAM
+              </p>
+              <h2 className={styles.crewHeadline}>Behind the work.</h2>
+              <p className={styles.crewSub}>
+                {isEn
+                  ? 'Before the first guest arrives, our team is already in motion.'
+                  : 'Sebelum tamu pertama tiba, tim kami sudah bergerak.'}
+              </p>
+            </div>
+
+            <div className={styles.crewGrid}>
+              <div className={styles.crewMedia}>
+                <Image
+                  src="/assets/about-crew-1.jpg"
+                  fill
+                  alt={isEn ? 'Elevent crew at work' : 'Tim Elevent sedang bekerja'}
+                  sizes="(max-width: 767px) 100vw, 33vw"
+                  style={{ objectFit: 'cover', filter: 'saturate(0.85)' }}
+                />
+              </div>
+              <div className={styles.crewMedia}>
+                <iframe
+                  className={styles.crewVideo}
+                  src="https://www.youtube-nocookie.com/embed/1LMPuaB6AuA?autoplay=1&mute=1&controls=0&loop=1&playlist=1LMPuaB6AuA"
+                  title={isEn ? 'Elevent crew highlight' : 'Highlight tim Elevent'}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+              <div className={styles.crewMedia}>
+                <Image
+                  src="/assets/about-crew-2.jpg"
+                  fill
+                  alt={isEn ? 'Elevent crew at work' : 'Tim Elevent sedang bekerja'}
+                  sizes="(max-width: 767px) 100vw, 33vw"
+                  style={{ objectFit: 'cover', filter: 'saturate(0.85)' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── 5. THE STANDARD — 2×2 bordered grid ──────────────── */}
         <section className={styles.standardSection}>
           <div className={styles.inner}>
 
             <div className={styles.standardHeader}>
-              <p className={styles.sectionLabel}>04 — THE STANDARD</p>
+              <p className={styles.sectionLabel}>05 — THE STANDARD</p>
               <h2 className={styles.sectionHeadline}>
                 What we won&apos;t compromise on.
               </h2>
@@ -288,7 +346,7 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
 
           <div className={styles.inner}>
             <div className={styles.geoBody}>
-              <p className={styles.sectionLabel}>05 — WHERE WE WORK</p>
+              <p className={styles.sectionLabel}>06 — WHERE WE WORK</p>
               <h2 className={styles.narrativeHeadline}>Jakarta. Bali. Surabaya.</h2>
               <p className={styles.geoSub}>
                 {isEn ? 'And other cities across Indonesia.' : 'Dan kota-kota lain di seluruh Indonesia.'}
