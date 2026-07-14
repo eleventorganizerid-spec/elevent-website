@@ -286,7 +286,7 @@ export default async function AboutPage({ searchParams }: { searchParams: Promis
               <div className={styles.crewMedia}>
                 <iframe
                   className={styles.crewVideo}
-                  src="https://www.youtube-nocookie.com/embed/1LMPuaB6AuA?autoplay=1&mute=1&controls=0&loop=1&playlist=1LMPuaB6AuA"
+                  src="https://www.youtube-nocookie.com/embed/1LMPuaB6AuA?autoplay=1&mute=1&controls=0&loop=1&playlist=1LMPuaB6AuA&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3"
                   title={isEn ? 'Elevent crew highlight' : 'Highlight tim Elevent'}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
