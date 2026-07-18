@@ -812,17 +812,23 @@
 .crewGrid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr; /* 25% | 50% (video focal point) | 25% */
-  grid-auto-rows: clamp(220px, 27vw, 360px);
+  align-items: stretch;
   gap: clamp(12px, 1.5vw, 20px);
 }
 
-/* Cells share one fixed row height, so all three match despite unequal widths */
+/* Photo cells stretch to whatever height the video cell defines */
 .crewMedia {
   position: relative;
   width: 100%;
   height: 100%;
   background: #000;
   overflow: hidden;
+}
+
+/* Center video cell sets the row height at a native 16:9 */
+.crewGrid > .crewMedia:nth-child(2) {
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
 
 /* 16:9 video scaled to cover its cell (any aspect) with no letterbox */
@@ -843,10 +849,9 @@
 @media (max-width: 767px) {
   .crewGrid {
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
   }
 
-  /* Stacked full-width cells revert to a clean 3:2 on mobile */
+  /* Stacked full-width: photos revert to 3:2, video stays native 16:9 */
   .crewMedia {
     height: auto;
     aspect-ratio: 3 / 2;
